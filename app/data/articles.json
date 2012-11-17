@@ -40,6 +40,16 @@
     "pin":false
   },
   {
+    "name":"KRONENBOURG",
+    "mark":"Bière blonde",
+    "price":"4.53",
+    "img":"/images/articles/m_00100806.gif",
+    "id":"100806",
+    "from":33,
+    "note":60,
+    "pin":false
+  },
+  {
     "name":"HEINEKEN",
     "mark":"Bière blonde",
     "price":"5.02",
@@ -106,16 +116,6 @@
     "img":"/images/articles/m_00100732.gif",
     "id":"100732",
     "from":10,
-    "note":60,
-    "pin":false
-  },
-  {
-    "name":"KRONENBOURG",
-    "mark":"Bière blonde",
-    "price":"4.53",
-    "img":"/images/articles/m_00100806.gif",
-    "id":"100806",
-    "from":30,
     "note":60,
     "pin":false
   },

@@ -21,6 +21,9 @@ cartocadApp.controller('MainCtrl', function($scope, $http, $document) {
     $scope.note -= $scope.cart[$scope.indexToSwitch].note;
     $scope.cart[$scope.indexToSwitch] = article;
     $scope.pieValue += article.from;
+    if ($scope.pieValue == 99) {
+      $scope.pieValue = 100;
+    }
     $scope.note += article.note;
     $scope.showAltDiv = false;
   };
@@ -45,7 +48,7 @@ cartocadApp.controller('MainCtrl', function($scope, $http, $document) {
         "price":"4.53",
         "img":"/images/articles/m_00100806.gif",
         "id":"100806",
-        "from":30,
+        "from":33,
         "note":15,
         "pin":false
       },

@@ -7,7 +7,7 @@ cartocadApp.directive('pie', function() {
     link: function postLink(scope, element, attrs) {
       element.peity("pie", {
         colours: function() {
-          return ["#dddddd", "blue"];
+          return ["#dddddd", "#E85925"];
         },
         diameter: function() {
           return "120";
