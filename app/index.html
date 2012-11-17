@@ -19,9 +19,17 @@
         <link rel="stylesheet" type="text/css" media="all" href="styles/tooltip.css" charset="iso-8859-1" />
         <link rel="stylesheet" type="text/css" media="all" href="styles/panier.css" charset="iso-8859-1" />
         <link rel="stylesheet" type="text/css" media="all" href="styles/articles.css" charset="iso-8859-1" />
+        <script src="scripts/vendor/jquery.min.js"></script>
+        <script src="scripts/vendor/jquery.peity.min.js"></script>
     </head>
     <body ng-app="cartocadApp" ng-controller="MainCtrl">
 
+
+    <script language="javascript">
+        $(document).load( function() {
+            $("span.pie").peity("pie")
+        });
+    </script>
 
     <div id="hautpage"><!-- Bloc supérieur de la page -->
         <a id="retouraccueil" href="#" title="retour à l'accueil AuchanDirect"><img src="images/espaceur.gif" title="Retour à l'accueil AuchanDirect" alt="Retour à l'accueil AuchanDirect" /></a>
@@ -169,12 +177,20 @@
     </div>
 
     </div>
-    <p id="suggestions">Si vous avez des suggestions de produits, <a href="#/index/contact/page/suggestions/" title="Faites-nous part de vos suggestions" class="orangeb txt11">dites-le nous</a> !</p>
+    <p id="suggestions">Si vous avez des suggestions de produits, <a href="http://www.auchandirect.fr/frontoffice//index/contact/page/suggestions/" title="Faites-nous part de vos suggestions" class="orangeb txt11">dites-le nous</a> !
+        <div id="cartocad">
+        Cartocad
+
+        <span class="pie">1/5</span>
+
+    </div>
+    </p>
 
     </div>
 
     </div>
     <div id="panierPersistant">
+
         <div id="panier">
             <map id="detailpanier" name="detailpanier">
                 <area id="detailpanier_area" shape="rect" coords="5, 5, 183, 20" href="#index/panier_details" alt="Détails de votre panier" title="Détails de votre panier" />
