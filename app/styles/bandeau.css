@@ -17,7 +17,7 @@ div#bandeau_accueil ul#infosAccueil {
     position:           relative;
     top:                0;
     left:               5px !important;
-    list-style-image:   url('../../img/static/global/puceBandeauAccueil.gif');
+    list-style-image:   url('../images/puceBandeauAccueil.gif');
     margin-left:        10px;
     padding-left:       25px;
     z-index:			200; /* MK */
@@ -75,7 +75,7 @@ p#bandeauaccueilidentifie {
     /* margin-bottom:      25px; */
     margin-bottom:		0px;
     background-color:   #63af24;
-    /*background-image:   url('../../img/static/home/hautgauchebandeau.gif');*/
+    /*background-image:   url('../images/hautgauchebandeau.gif');*/
     background-position: 0 0;
     background-repeat:  no-repeat;
 }
@@ -110,7 +110,7 @@ div#bandeau_accueil_famille {
 div#bandeau_moncompte, div#bandeau_service {
     color:              inherit;
     background-color:   #63af24;
-    background-image:   url('../../img/static/bandeau/univ_img.gif');
+    background-image:   url('../images/univ_img.gif');
 }
 div#bandeau_accueil_famille p, div#bandeau_moncompte p  {
     position:           absolute;

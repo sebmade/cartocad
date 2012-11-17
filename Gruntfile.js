@@ -74,7 +74,7 @@ module.exports = function( grunt ) {
     // https://github.com/cowboy/grunt/blob/master/docs/task_lint.md#lint-built-in-task
     lint: {
       files: [
-        'Gruntfile.js',
+        'articles.css',
         'app/scripts/**/*.js',
         'spec/**/*.js'
       ]

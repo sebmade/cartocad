@@ -10,7 +10,7 @@ div#carroussel {
     width:              100%;
     clear:              left;
     overflow:           hidden;
-    background-image:   url('../../img/carroussel/fondbascarroussel.gif');
+    background-image:   url('../images/fondbascarroussel.gif');
     background-repeat:  repeat-x;
     background-position: 0 55px;
 }
@@ -18,7 +18,7 @@ div#carroussel span#flechegauche {
     display:            block;
     width:              40px;
     height:             75px;
-    background-image:   url('../../img/carroussel/left.gif');
+    background-image:   url('../images/left.gif');
     background-repeat:  no-repeat;
     background-position: 0 0;
     position:           absolute;
@@ -30,7 +30,7 @@ div#carroussel span#flechedroite {
     display:            block;
     width:              40px;
     height:             73px;
-    background-image:   url('../../img/carroussel/right.gif');
+    background-image:   url('../images/right.gif');
     background-repeat:  no-repeat;
     background-position: top right;
     position:           absolute;
@@ -79,7 +79,7 @@ table#carrousselfamilles tr td {
 tr.imgcarroussel td {
     height:             54px;
     vertical-align:     bottom;
-    background-image:   url('../../img/carroussel/wait.gif');
+    background-image:   url('../images/wait.gif');
     background-repeat:  no-repeat;
     background-position: 15px 5px;
     font-size:          9px;
@@ -156,7 +156,7 @@ a.labeltext {
     text-decoration:    none;
 }
 .tabback   {
-    background-image:   url('http://www.auchandirect.fr/images/static/divers/topnav/tab.gif');
+    background-image:   url('../images/tab.gif');
     background-repeat:  no-repeat;
     padding-bottom:     2px;
     text-align:         center;

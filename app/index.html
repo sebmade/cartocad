@@ -11,20 +11,20 @@
         <meta name="viewport" content="width=device-width"/>
         <link rel="stylesheet" href="styles/main.css"/>
 
-        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/layout/layout1.css?20090628" charset="iso-8859-1" />
-        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/catalogue/carroussel.css?20090628" charset="iso-8859-1" />
-        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/global/banniere.css?20090628" charset="iso-8859-1" />
-        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/global/blocgauche.css?20090628" charset="iso-8859-1" />
-        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/global/bandeau.css?20090628" charset="iso-8859-1" />
-        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/global/tooltip.css?20090628" charset="iso-8859-1" />
-        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/commande/panier.css?20090628" charset="iso-8859-1" />
-        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/catalogue/articles.css?20090628" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="styles/layout1.css" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="styles/carroussel.css" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="styles/banniere.css" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="styles/blocgauche.css" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="styles/bandeau.css" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="styles/tooltip.css" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="styles/panier.css" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="styles/articles.css" charset="iso-8859-1" />
     </head>
     <body ng-app="cartocadApp" ng-controller="MainCtrl">
 
 
     <div id="hautpage"><!-- Bloc supérieur de la page -->
-        <a id="retouraccueil" href="http://www.auchandirect.fr/frontoffice/" title="retour à l'accueil AuchanDirect"><img src="http://images.auchandirect.fr/frontoffice/img/espaceur.gif" title="Retour à l'accueil AuchanDirect" alt="Retour à l'accueil AuchanDirect" /></a>
+        <a id="retouraccueil" href="http://www.auchandirect.fr/frontoffice/" title="retour à l'accueil AuchanDirect"><img src="images/espaceur.gif" title="Retour à l'accueil AuchanDirect" alt="Retour à l'accueil AuchanDirect" /></a>
         <div id="master_iab">
             <div id="bannieresTopNav">
                 <script type='text/javascript'>sas_pageid='22641/155731';sas_formatid=9862;sas_target='';SmartAdServer(sas_pageid,sas_formatid,sas_target);</script>
@@ -37,7 +37,7 @@
             <li class="liens_top"><a href="http://www.auchandirect.fr/frontoffice/index/services/page/Auchan" title="Auchan"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/ico_auchan.gif" title="Auchan" alt="Auchan" /></a></li>
             <li class="liens_top"><a href="http://www.auchandirect.fr/frontoffice/index/services/page/Nous+contacter" title="Contact"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/ico_contact.gif" title="Contact" alt="Contact" /></a></li>
             <li class="liens_top"><a href="http://www.auchandirect.fr/frontoffice/index/services/page/Aide" title="Aide"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/ico_aide.gif" title="Aide" alt="Aide" /></a></li>
-            <li id="li_img_aide_nav"><a href="http://www.auchandirect.fr/frontoffice/" onclick="return false;" onmouseover="oCarroussel.aidenav('on');" onmouseout="oCarroussel.aidenav('off');"><img id="img_aide_nav" src="http://images.auchandirect.fr/frontoffice/img/espaceur.gif" alt="" /></a></li>
+            <li id="li_img_aide_nav"><a href="http://www.auchandirect.fr/frontoffice/" onclick="return false;" onmouseover="oCarroussel.aidenav('on');" onmouseout="oCarroussel.aidenav('off');"><img id="img_aide_nav" src="images/espaceur.gif" alt="" /></a></li>
         </ul>
 
         <div id="carroussel">
@@ -114,7 +114,7 @@
             <div id="barrerecherche"><!-- Formulaire de recherche -->
                 <form id="chercher" action="http://www.auchandirect.fr/frontoffice/index/recherche/" method="post">
                     <p>
-                        <a href="http://www.auchandirect.fr/frontoffice/index/astuces/" id="lienastuces" title="Astuces de recherche" onclick="if(oContexte.action == 'recherche'){return displayRechercheAstuce(true);}else{return true;}"><img src="http://images.auchandirect.fr/frontoffice/img/espaceur.gif" alt="" /></a>
+                        <a href="http://www.auchandirect.fr/frontoffice/index/astuces/" id="lienastuces" title="Astuces de recherche" onclick="if(oContexte.action == 'recherche'){return displayRechercheAstuce(true);}else{return true;}"><img src="images/espaceur.gif" alt="" /></a>
                         <label for="sMotsRecherche">RECHERCHE </label><input type="text" name="sMotsRecherche" id="sMotsRecherche" value="exemple : pommes" title="Recherche" onclick="if (this.value == 'exemple : pommes') this.value = '';" maxlength="100" />
                         <input type="submit" id="rechercher" name="rechercher" style="background-image: url(http://www.auchandirect.fr/frontoffice/img/carroussel/search.gif);" value="" title="Lancer la recherche" />
                     </p>
@@ -123,7 +123,7 @@
         </div>
     </div>
     <div id="bannieresPanier">
-        
+
     </div>
     <div id="index">
     <div id="bandeau_accueil_famille" style="background-image: url('images/15022_banniere.jpg'); background-repeat: no-repeat; color: #3F5F07;  background-color: #82B22C;">
