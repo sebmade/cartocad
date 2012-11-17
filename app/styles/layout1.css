@@ -10,7 +10,7 @@ html * {
 body {
     margin:             0;
     font-size:          80%;
-    background-image:   url('../../img/carroussel/topleft.gif');
+    background-image:   url('../images/topleft.gif');
     background-position: 0 2px;
     background-repeat:  no-repeat;
     overflow:           auto;
@@ -23,7 +23,7 @@ body * {
 div#hautpage {
     position:           relative;
     height:             150px;
-    background-image:   url('../../img/carroussel/bottom.gif');
+    background-image:   url('../images/bottom.gif');
     background-repeat:  no-repeat;
     background-position: 0 122px;
     top: 55px;
@@ -72,7 +72,7 @@ div#bandeau_accueil {
 	 color:              #ffffff;
     background-color:   #63af24;
     overflow:           hidden;
-    background-image:   url('../../img/accueil/bandeauaccueil_bg.gif');
+    background-image:   url('../images/bandeauaccueil_bg.gif');
     background-position: 0 160px;
     background-repeat:  no-repeat;
     /* Pour décaler vers le bas */ /* top:55px; */
@@ -86,7 +86,7 @@ table#tab_bandeau_accueil {
 	 color:              #ffffff;
     background-color:   #63af24;
     overflow:           hidden;
-    background-image:   url('../../img/accueil/bandeauaccueil_bg.gif');
+    background-image:   url('../images/bandeauaccueil_bg.gif');
     background-position: 0 160px;
     background-repeat:  no-repeat;
     /* Pour décaler vers le bas */ /* top:55px; */
@@ -158,7 +158,7 @@ ul#menutop {
     left:              0;
     width:              262px;
     height:             47px;
-    background-image:   url('../../img/carroussel/topright_new.gif');
+    background-image:   url('../images/topright_new.gif');
     background-repeat:  no-repeat;
     background-position: 0 2px;
     text-align:         right;
@@ -203,7 +203,7 @@ p#aidenav {
     color:              #666;
     background-color:   #fff;
     border-top:         none;
-    background-image:   url('../../img/carroussel/help.gif');
+    background-image:   url('../images/help.gif');
     background-repeat:  no-repeat;
     background-position: 0 0;
     z-index:            500;
@@ -211,7 +211,7 @@ p#aidenav {
 }
 /* Bloc de recherche */
 div#barrerecherche {
-    background-image:   url('../../img/carroussel/loupe.gif');
+    background-image:   url('../images/loupe.gif');
     background-repeat:  no-repeat;
     background-position: 3px 3px;
     padding:            3px 0 0 25px;
@@ -278,7 +278,7 @@ ul#menuTopAccueil li {
     width:              85px;
     height:             22px;
     text-align:         center;
-    background-image:   url('../../img/carroussel/tab.gif');
+    background-image:   url('../images/tab.gif');
     background-position: 0 0;
     background-repeat:  no-repeat;
 }
@@ -291,7 +291,7 @@ ul#menuTopAccueil li.myauchandirect {
     width:              124px;
     height:             22px;
     text-align:         center;
-    background-image:   url('../../img/carroussel/tab_large.gif');
+    background-image:   url('../images/tab_large.gif');
     background-position: 0 0;
     background-repeat:  no-repeat;
 }
@@ -461,7 +461,7 @@ hr.infos {
 /* Titre de la page */
 p#titrepage {
     height:             46px;
-    background-image:   url('../../img/static/global/points.gif');
+    background-image:   url('../images/points.gif');
     background-position: 0 37px;
     background-repeat:  repeat-x;
     position:           relative;
@@ -471,7 +471,7 @@ p#titrepage {
 /* Titre de la page, en classe, car on doit en utiliser 2 sur la page de résultats de recherche (1 pour votre recherche et 1 pour les astuces) */
 p.titrepage {
     height:             46px;
-    background-image:   url('../../img/static/global/points.gif');
+    background-image:   url('../images/points.gif');
     background-position: 0 37px;
     background-repeat:  repeat-x;
     position:           relative;
@@ -498,7 +498,7 @@ html * {
 body {
     margin:             0;
     font-size:          80%;
-    background-image:   url('../../img/carroussel/topleft_new.gif');
+    background-image:   url('../images/topleft_new.gif');
     background-position: 0 2px;
     background-repeat:  no-repeat;
     overflow:           auto;
@@ -511,7 +511,7 @@ body * {
 div#hautpage {
     position:           relative;
     height:             150px;
-    background-image:   url('../../img/carroussel/bottom.gif');
+    background-image:   url('../images/bottom.gif');
     background-repeat:  no-repeat;
     background-position: 0 122px;
 }

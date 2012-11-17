@@ -142,7 +142,7 @@ div#bandeau_accueil_famille.promotion span.choixAffiche {
     text-decoration:        underline;
 }
 div#bandeau_accueil_famille.nouveaute {
-    background-image:       url('../../img/static/banniere/2.jpg');
+    background-image:       url('../images/2.jpg');
     color:                  #fff;
     background-color:       #8cae31;
 }
