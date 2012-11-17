@@ -1,0 +1,66 @@
+/**
+ * Projet AD - Version 1.15
+ */
+
+/* Bannieres TopNav (1) */
+a.banniere_1 {
+    margin:             0 3px;
+    padding:            0;
+}
+a.banniere_1 img {
+    border:             none;
+    /*
+    width:              230px;
+    height:             33px;
+    */
+    margin:             0;
+    padding:            0;
+}
+
+/* Bannieres Famille (2) */
+a.banniere_2{
+    display:                inline;
+    margin:                 0;
+    padding:                0;
+    vertical-align:         middle;
+}
+a.banniere_2 img{
+    border:             none;
+    margin:             0;
+}
+
+/* Bannieres Panier (3) */
+a.banniere_3 {
+    border:             none;
+    display:            block;
+    width:              193px;
+    height:             57px;
+    margin:             auto;
+    padding:            0;
+}
+a.banniere_3 img {
+    border:             none;
+    margin:             0;
+    width:              193px;
+    height:             58px;
+}
+
+div#bannieres_pied {
+    position: relative;
+    top: 50px;
+    color: inherit;
+    height: 95px;
+    clear: both;
+}
+
+div#banniere_pied_gauche {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+div#banniere_pied_droite {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title></title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="styles/main.css"/>
+
+        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/layout/layout1.css?20090628" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/catalogue/carroussel.css?20090628" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/global/banniere.css?20090628" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/global/blocgauche.css?20090628" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/global/bandeau.css?20090628" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/global/tooltip.css?20090628" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/commande/panier.css?20090628" charset="iso-8859-1" />
+        <link rel="stylesheet" type="text/css" media="all" href="http://images.auchandirect.fr/frontoffice/css/catalogue/articles.css?20090628" charset="iso-8859-1" />
+    </head>
+    <body ng-app="cartocadApp" ng-controller="MainCtrl">
+
+
+    <div id="hautpage"><!-- Bloc supérieur de la page -->
+        <a id="retouraccueil" href="http://www.auchandirect.fr/frontoffice/" title="retour à l'accueil AuchanDirect"><img src="http://images.auchandirect.fr/frontoffice/img/espaceur.gif" title="Retour à l'accueil AuchanDirect" alt="Retour à l'accueil AuchanDirect" /></a>
+        <div id="master_iab">
+            <div id="bannieresTopNav">
+                <script type='text/javascript'>sas_pageid='22641/155731';sas_formatid=9862;sas_target='';SmartAdServer(sas_pageid,sas_formatid,sas_target);</script>
+
+            </div>
+        </div>
+        <ul id="menutop"><!-- Menu accueil/aide/contact -->
+            <!-- <li class="liens_top"><a href="http://www.auchandirect.fr/frontoffice/" title="Accueil"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/ico_accueil.gif" title="Accueil" alt="Accueil" /></a></li> -->
+            <li class="liens_top"><div style="width:42px; height:18px"></div></li>
+            <li class="liens_top"><a href="http://www.auchandirect.fr/frontoffice/index/services/page/Auchan" title="Auchan"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/ico_auchan.gif" title="Auchan" alt="Auchan" /></a></li>
+            <li class="liens_top"><a href="http://www.auchandirect.fr/frontoffice/index/services/page/Nous+contacter" title="Contact"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/ico_contact.gif" title="Contact" alt="Contact" /></a></li>
+            <li class="liens_top"><a href="http://www.auchandirect.fr/frontoffice/index/services/page/Aide" title="Aide"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/ico_aide.gif" title="Aide" alt="Aide" /></a></li>
+            <li id="li_img_aide_nav"><a href="http://www.auchandirect.fr/frontoffice/" onclick="return false;" onmouseover="oCarroussel.aidenav('on');" onmouseout="oCarroussel.aidenav('off');"><img id="img_aide_nav" src="http://images.auchandirect.fr/frontoffice/img/espaceur.gif" alt="" /></a></li>
+        </ul>
+
+        <div id="carroussel">
+            <p id="aidenav" style="display: none">Pour naviguer au sein du<br />
+                magasin, faites défiler les<br />
+                rayons avec les flèches<br />
+                gauche et droite</p>
+            <span id="flechegauche"><a href="http://www.auchandirect.fr/frontoffice/" title="Cliquez pour accélérer" id="activeg" style="display: none" onmouseover="oCarroussel.deplacer('lentd', 21);" onmousedown="oCarroussel.arreter(); oCarroussel.deplacer('vited', 21);" onmouseup="oCarroussel.arreter(); oCarroussel.deplacer('lentd', 21);" onmouseout="oCarroussel.arreter();" onclick="return(false);"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/arrowleft.gif" alt="" /></a><a href="http://www.auchandirect.fr/frontoffice/" title="" id="masqueg" style="display: inline; cursor: default;" onmouseout="oCarroussel.arreter();" onclick="return(false);"><img id="flgauche" src="http://images.auchandirect.fr/frontoffice/img/carroussel/arrowleft-disabled.gif" alt="" /></a></span>
+            <span id="flechedroite" onmouseover="oCarroussel.stopClignotantDroite();" onmouseout="oCarroussel.resumeClignotantDroite();"><a href="http://www.auchandirect.fr/frontoffice/" title="Cliquez pour accélérer" id="actived" style="display: inline" onmouseover="oCarroussel.deplacer('lentg', 21);" onmousedown="oCarroussel.arreter(); oCarroussel.deplacer('viteg', 21);" onmouseup="oCarroussel.arreter(); oCarroussel.deplacer('lentg', 21);" onmouseout="oCarroussel.arreter();" onclick="oCarroussel.setClignotantDroiteOFF(); return(false);"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/arrowright.gif" alt="" /></a><a href="http://www.auchandirect.fr/frontoffice/" title="" id="masqued" style="display: none; cursor: default;" onmouseout="oCarroussel.arreter();" onclick="return(false);"><img id="fldroite" src="http://images.auchandirect.fr/frontoffice/img/carroussel/arrowright-disabled.gif" alt="" /></a></span>
+            <div id="carrousselfp">
+                <table id="carrousselfamilles" summary="" style="position: relative; top: 0; left: 0px;">
+                    <tbody>
+                    <tr class="imgcarroussel">
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue_s/famille/11821" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','11821');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('11821');" title=""><img id="item11821" src="/images/11821_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue_s/famille/16321" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','16321');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('16321');" title=""><img id="item16321" src="/images/16321_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/19022" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','19022');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('19022');" title=""><img id="item19022" src="/images/19022_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/19300" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','19300');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('19300');" title=""><img id="item19300" src="/images/19300_icone.jpg" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/19358" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','19358');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('19358');" title=""><img id="item19358" src="/images/19358_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15022" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15022');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15022');" title=""><img id="item15022" src="/images/15022_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15039" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15039');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15039');" title=""><img id="item15039" src="/images/15039_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15053" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15053');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15053');" title=""><img id="item15053" src="/images/15053_icone.gif" /></a><td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15068" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15068');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15068');" title=""><img id="item15068" src="/images/15068_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15098" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15098');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15098');" title=""><img id="item15098" src="/images/15098_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15116" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15116');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15116');" title=""><img id="item15116" src="/images/15116_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15131" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15131');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15131');" title=""><img id="item15131" src="/images/15131_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15144" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15144');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15144');" title=""><img id="item15144" src="/images/15144_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15158" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15158');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15158');" title=""><img id="item15158" src="/images/15158_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15169" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15169');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15169');" title=""><img id="item15169" src="/images/15169_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15184" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15184');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15184');" title=""><img id="item15184" src="/images/15184_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15198" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15198');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15198');" title=""><img id="item15198" src="/images/15198_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15213" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15213');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15213');" title=""><img id="item15213" src="/images/15213_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15225" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15225');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15225');" title=""><img id="item15225" src="/images/15225_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15243" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15243');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15243');" title=""><img id="item15243" src="/images/15243_icone.gif" /></a></td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15258" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15258');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15258');" title=""><img id="item15258" src="/images/15258_icone.gif" /></a></td>
+                        <td style="width: 100px"><a target="_blank" href="http://auchandirect.photobox.fr/?cid=carrousel" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','1111111');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('1111111');" title=""><img id="item1111111" src="/images/photobox-photo.gif" /></a></td>
+                    </tr>
+                    <tr style="height: 19px">
+                        <td class="labelback" style="background-color: #FA0228;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue_s/famille/11821" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','11821');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('11821');" title="">Promotions</a></td>
+                        <td class="labelback" style="background-color: #8cae31;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue_s/famille/16321" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','16321');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('16321');" title="">Nouveautés</a></td>
+                        <td class="labelback" style="background-color: #FA0228;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/19022" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','19022');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('19022');" title="">Produits Auchan</a></td>
+                        <td class="labelback" style="background-color: #BF3636;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/19300" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','19300');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('19300');" title="">Produits de fêtes</a></td>
+                        <td class="labelback" style="background-color: #639c08;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/19358" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','19358');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('19358');" title="">Bio, Ecolo</a></td>
+                        <td class="labelback" style="background-color: #82B22C;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15022" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15022');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15022');" title="">Le marché</a></td>
+                        <td class="labelback" style="background-color: #C6E1F3;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15039" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15039');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15039');" title="">Produits laitiers</a></td>
+                        <td class="labelback" style="background-color: #FFA6A6;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15053" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15053');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15053');" title="">Charcuterie</a></td>
+                        <td class="labelback" style="background-color: #63B9E3;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15068" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15068');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15068');" title="">Surgelés</a></td>
+                        <td class="labelback" style="background-color: #4065AE;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15098" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15098');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15098');" title="">Epicerie salée</a></td>
+                        <td class="labelback" style="background-color: #F5C966;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15116" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15116');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15116');" title="">Epicerie sucrée</a></td>
+                        <td class="labelback" style="background-color: #FFAE3B;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15131" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15131');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15131');" title="">Petit déjeuner</a></td>
+                        <td class="labelback" style="background-color: #f79cda;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15144" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15144');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15144');" title="">Sans alcool</a></td>
+                        <td class="labelback" style="background-color: #D5500B;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15158" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15158');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15158');" title="">Apéritifs</a></td>
+                        <td class="labelback" style="background-color: #A61246;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15169" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15169');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15169');" title="">Alcools, Vins</a></td>
+                        <td class="labelback" style="background-color: #FFABC3;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15184" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15184');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15184');" title="">Produits bébé</a></td>
+                        <td class="labelback" style="background-color: #F6DDB7;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15198" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15198');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15198');" title="">Diététique</a></td>
+                        <td class="labelback" style="background-color: #FFB400;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15213" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15213');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15213');" title="">Saveurs ailleurs</a>/td>
+                        <td class="labelback" style="background-color: #D5A9CA;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15225" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15225');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15225');" title="">Soin, Hygiène</a></td>
+                        <td class="labelback" style="background-color: #3BBB86;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15243" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15243');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15243');" title="">Entretien</a></td>
+                        <td class="labelback" style="background-color: #A55965;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15258" class="labeltext" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15258');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15258');" title="">Animaux</a></td>
+                        <td class="labelback" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','1111111');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('1111111');" style="background-color: #FF090A;"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/label.gif" alt="" /><a target="_blank" href="http://auchandirect.photobox.fr/?cid=carrousel" class="labeltext" title="">Photo</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="barre_nav_rech">
+            <ul id="menuTopAccueil">
+                <li><a href="http://www.auchandirect.fr/frontoffice" title="Retour à la page d'accueil">ACCUEIL</a></li>
+                <li><a href="https://www.auchandirect.fr/frontoffice/index/inscription_rapide/page/inscription_rapide/" title="Inscrivez-vous" class="vert">INSCRIPTION</a></li>
+                <li><a href="http://www.auchandirect.fr/frontoffice/index/services/" title="SERVICES" class="vert">SERVICES</a></li>
+                <!--<li><a href="http://www.auchandirect.fr/frontoffice" onclick="window.open('http://www.auchandirect.fr/frontoffice/static/demos/part1/index.htm', '','toolbar=no,scrollbars=yes,location=no, directories=no, status=no, resizable=yes, width=1000, height=700, left=100, top=50'); return false;" title="Cliquez pour voir la vidéo" class="vert"><img src="http://images.auchandirect.fr/frontoffice/img/carroussel/OngletVisiteGuidee.gif" alt="Visite guidée" /></a></li>-->
+                <li><a href="https://www.auchandirect.fr/frontoffice/index/identification_rapide/rapide/1" title="Vos listes de courses enregistrées" class="vert">MES LISTES</a></li>
+            </ul>
+            <div id="barrerecherche"><!-- Formulaire de recherche -->
+                <form id="chercher" action="http://www.auchandirect.fr/frontoffice/index/recherche/" method="post">
+                    <p>
+                        <a href="http://www.auchandirect.fr/frontoffice/index/astuces/" id="lienastuces" title="Astuces de recherche" onclick="if(oContexte.action == 'recherche'){return displayRechercheAstuce(true);}else{return true;}"><img src="http://images.auchandirect.fr/frontoffice/img/espaceur.gif" alt="" /></a>
+                        <label for="sMotsRecherche">RECHERCHE </label><input type="text" name="sMotsRecherche" id="sMotsRecherche" value="exemple : pommes" title="Recherche" onclick="if (this.value == 'exemple : pommes') this.value = '';" maxlength="100" />
+                        <input type="submit" id="rechercher" name="rechercher" style="background-image: url(http://www.auchandirect.fr/frontoffice/img/carroussel/search.gif);" value="" title="Lancer la recherche" />
+                    </p>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div id="bannieresPanier">
+        <script type='text/javascript'>sas_pageid='22641/155731';sas_formatid=9863;sas_target='';SmartAdServer(sas_pageid,sas_formatid,sas_target);</script>
+
+    </div>    <div id="index">
+    <div id="bandeau_accueil_famille" style="background-image: url('/images/15022_banniere.jpg'); background-repeat: no-repeat; color: #3F5F07;  background-color: #82B22C;">
+        <div id="bannieresFamille">
+
+        </div>
+        <p class="avecform">
+            <span style="color: #fff; background-color: inherit;">Votre choix : </span>
+            <span style="color: #3F5F07; background-color: inherit;" id="bandeau_label_recherche"><span class="souligne"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15022" style="color: #3F5F07; background-color: inherit"><span class="choixAffiche">Le marché  - Volailles</span></a></span></span>
+
+            <span style="color: #3F5F07; background-color: inherit; display:none;" id="bandeau_label_astuce">Recherche &gt; Astuces</span>
+        </p>
+        <form id="liste_ssfamille" action="./" method="post">
+            <fieldset>
+                <select id="ssfamilles" name="ssfamilles" onchange="redirectSsRayon('http://www.auchandirect.fr/frontoffice/index/ssrayon/famille/15022/rayon/15033/ssrayon/15358', this.value);">
+                    <option value="15033"><B>Afficher tous les produits</B></option>
+                    <option value="15358">Poulet</option>
+                    <option value="15359">Dinde</option>
+                    <option value="15360">Canard - Autres volailles</option>
+                    <option value="16944">Volailles cuisinées</option>
+                </select>
+                <a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15022" title="Retour au rayon"><img id="retour" src="http://www.auchandirect.fr/frontoffice/img/bouton/retour_rayon.gif" alt="Retour au rayon" /></a>
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="blocCentral">
+    <p id="nombreArticles">{{articles.length}} articles disponibles</p>
+    <div id="blocs_articles">
+    <div id="blocProduitp_4276" class="article produit_n_4_d" ng-repeat="a in articles">
+        <p class="imgArticle"><a ng-click="" class="lienArticle" style="width: 90px; height: 90px;"><img class="produit" src="{{a.img}}" alt="" style="width: 90px; height: 90px;" /></a></p>
+        <p id="infoProduitp_4276" class="nomProduit">
+            <span class="label1">{{a.name}}</span>
+            <br />
+            <span class="label2">{{a.mark}}</span>
+        </p>
+        <p class="prixProduit">
+            <span class="prixPromo" style="display: none;">&nbsp;</span>{{a.price}} &euro;
+        </p>
+        <p class="prodType prodType_n_2">&nbsp;</p>
+        <p class="boutonsArticle">
+            <a href="http://www.auchandirect.fr/frontoffice/index/listes_ajout/type/p/id/4276" title="Ajouter à la liste" onclick="return(verifInternauteLoggue());"><img src="http://www.auchandirect.fr/frontoffice//img/espaceur.gif" class="ajoutListe" alt="Ajouter à la liste" /></a>
+            <a href="./" title="Ajouter au panier" onclick="oPanier._insArticle('p_4276'); return false;"><img src="http://www.auchandirect.fr/frontoffice/img/espaceur.gif" class="ajoutPanier" alt="Ajouter au panier" /></a>
+        </p>
+    </div>
+
+    </div>
+    <p id="suggestions">Si vous avez des suggestions de produits, <a href="http://www.auchandirect.fr/frontoffice//index/contact/page/suggestions/" title="Faites-nous part de vos suggestions" class="orangeb txt11">dites-le nous</a> !</p>
+
+    </div>
+
+    </div>
+    <div id="panierPersistant">
+        <div id="panier">
+            <map id="detailpanier" name="detailpanier">
+                <area id="detailpanier_area" shape="rect" coords="5, 5, 183, 20" href="http://www.auchandirect.fr/frontoffice/index/panier_details" alt="Détails de votre panier" title="Détails de votre panier" />
+            </map>
+            <img id="hautpanier" src="http://images.auchandirect.fr/frontoffice/img/panier/detailpanier_new.gif" usemap="#detailpanier" alt="" />
+            detailpanier
+            <p id="panier_prix"></p>
+            <form id="formPanier" action="#" method="post" onsubmit="return false;">
+                <div id="panier_contenu">&nbsp;</div>
+                <div id="piedpanier">
+                    <input type="hidden" name="idListePanier" id="idListePanier" value="" />
+                    <input type="image" id="panier_vider" title="Vider le panier" src="http://images.auchandirect.fr/frontoffice/img/panier/panier_btn_vider.gif" name="panier_vider" value="vider" onclick="return oPanier._emptyPanier();" />
+                    <input type="image" id="panier_detail" title="Détails de votre panier" src="http://images.auchandirect.fr/frontoffice/img/panier/panier_btn_detail.gif" name="panier_detail" value="détail" onclick="location.href='http://www.auchandirect.fr/frontoffice/index/panier_details';" />
+                    <input type="image" id="panier_sauvegarder" title="Sauvegarder le panier" src="http://images.auchandirect.fr/frontoffice/img/panier/panier_btn_sauver.gif" name="panier_sauvegarder" value="sauvegarder" onclick="return oPanier._togglePanierListeDOM(true);" style="cursor: default;" />
+                    <input type="hidden" id="seuilMiniCommande" value="60" />
+                    <input type="hidden" id="typeLivraison" value="en livraison à domicile" />
+                    <input type="image" id="panier_payer" src="http://images.auchandirect.fr/frontoffice/img/panier/panier_btn_caisse.gif" name="panier_payer" value="panier_payer" onclick="return oPanier._passerCaisse('mini');"/>
+                </div>
+            </form>
+        </div>
+        <div id="panierListe" style="display: none; height: 200px; width: 193px">
+            <form id="FormSaveAsList" action="http://www.auchandirect.fr/frontoffice/" method="post" onsubmit="oPanier._insPaniertoListe($('ListName').value);return false;">
+                <h4>Votre Panier</h4>
+                <p class="rouge">Sauvegarder<br />
+                    mon panier comme liste</p>
+                <p class="gris">Je nomme cette liste : </p>
+                <p>
+                    <input type="text" name="ListName" id="ListName" maxlength="50" value="par exemple : produits d'entretien" onclick="this.value='';" onkeypress="if (event.keyCode == 13) oPanier._insPaniertoListe($('ListName').value);"/>
+                    <input type="image" name="annulSauvePanier" id="annulSauvePanier" src="http://images.auchandirect.fr/frontoffice/img/static/basket/bouton-annuler.gif" onclick="return oPanier._togglePanierListeDOM(false);" />
+                    <input type="image" name="sauverListePanier" id="sauverListePanier" src="http://images.auchandirect.fr/frontoffice/img/static/basket/bouton-confirmer.gif" style="height:24px; width:83px" onclick="return oPanier._insPaniertoListe($('ListName').value);" />
+                </p>
+                <p class="txt10">Toutes mes listes sont sauvegardées <span style="color:#7D9F22"><a href="http://www.auchandirect.fr/frontoffice/index/listes">ici</a></span>!</p>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <div id="tooltip" style="display:none;">&nbsp;</div>
+    <p id="tooltip_label" style="display:none;" class="">&nbsp;</p>
+
+        <script src="scripts/vendor/angular.js"></script>
+
+        <!-- build:js scripts/scripts.js -->
+        <script src="scripts/cartocad.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <!-- endbuild -->
+
+    </body>
+</html>

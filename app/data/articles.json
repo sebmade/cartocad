@@ -1,0 +1,23 @@
+[
+  {
+    "name":"LE POULET FERMIER",
+    "mark":"Label Rouge",
+    "price":"8.90",
+    "img":"/images/articles/4276.gif",
+    "id":"4276"
+  },
+  {
+    "name":"FERMIERS DE LOUE",
+    "mark":"Label Rouge",
+    "price":"8.90",
+    "img":"/images/articles/4286.gif",
+    "id":"4272"
+  },
+  {
+    "name":"LE GAULOIS",
+    "mark":"Roti de dinde filet",
+    "price":"8.90",
+    "img":"/images/articles/4286.gif",
+    "id":"4286"
+  }
+]

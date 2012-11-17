@@ -1,0 +1,360 @@
+/**
+ * Projet AD - Version 1.15
+ */
+div#blocs_articles {
+    position:           relative;
+    display:            block;
+    margin:             10px 0;
+    padding:            10px 10px;
+    text-align:         center;
+    height:             100%;
+}
+p#nombreArticles {
+    font-weight:        bold;
+    padding-left:       20px;
+    margin:             10px 0;
+    padding-bottom: 10px;
+}
+div.article {
+    width:              126px;
+    height:             160px;
+    position:           relative;
+    text-align:         center;
+    margin:             5px 2px 15px 1px;
+    float:              left;
+    background-position: 0 0;
+    background-repeat:  no-repeat;
+}
+
+/* CONTEXTE D'AFFICHAGE NORMAL  : n         */
+/* CONTEXTE D'AFFICHAGE SPECIAL : s         */
+/* CONTEXTE D'AFFICHAGE PANIER  : p         */
+
+/* FAMILLE 'NORMALE'        : 0             */
+/* FAMILLE 'TOP ACHAT'      : 1             */
+/* FAMILLE 'NOUVEAUTE'      : 2             */
+/* FAMILLE 'PROMOTION'      : 3             */
+/* FAMILLE 'EN CE MOMENT'   : 4             */
+/* FAMILLE 'SORTIE CAISSE'  : 5             */
+
+/* PRODUIT DISPONIBLE   : d                 */
+/* PRODUIT ARRETE       : a                 */
+/* PRODUIT INDISPONIBLE : i                 */
+
+div.produit_n_0_d {
+    background-image:   url('../../img/static/produit/produit_n_0_d.gif');
+}
+div.produit_n_0_i,div.produit_n_0_a,div.produit_n_0_b {
+    background-image:   url('../../img/static/produit/produit_n_0_i.gif');
+}
+div.produit_p_0_d,div.produit_p_0_i,div.produit_p_0_a,div.produit_p_0_b {
+    background-image:   url('../../img/static/produit/produit_p_0.gif');
+}
+div.produit_n_1_d {
+    background-image:   url('../../img/static/produit/produit_n_1_d.gif');
+}
+div.produit_n_1_i,div.produit_n_1_a,div.produit_n_1_b {
+    background-image:   url('../../img/static/produit/produit_n_1_i.gif');
+}
+div.produit_s_0_d {
+    background-image:   url('../../img/static/produit/produit_s_0_d.gif');
+}
+div.produit_s_0_i,div.produit_s_0_a,div.produit_s_0_b {
+    background-image:   url('../../img/static/produit/produit_s_0_i.gif');
+}
+div.produit_s_1_d {
+    background-image:   url('../../img/static/produit/produit_s_1_d.gif');
+}
+div.produit_s_1_i,div.produit_s_1_a,div.produit_s_1_b {
+    background-image:   url('../../img/static/produit/produit_s_1_i.gif');
+}
+div.produit_p_1_d,div.produit_p_1_i,div.produit_p_1_a,div.produit_p_1_b {
+    background-image:   url('../../img/static/produit/produit_p_1.gif');
+}
+div.produit_n_2_d {
+    background-image:   url('../../img/static/produit/produit_n_2_d.gif');
+}
+div.produit_n_2_i,div.produit_n_2_a,div.produit_n_2_b {
+    background-image:   url('../../img/static/produit/produit_n_2_i.gif');
+}
+div.produit_s_2_d {
+    background-image:   url('../../img/static/produit/produit_s_2_d.gif');
+}
+div.produit_s_2_i,div.produit_s_2_a,div.produit_s_2_b {
+    background-image:   url('../../img/static/produit/produit_s_2_i.gif');
+}
+div.produit_p_2_d,div.produit_p_2_i,div.produit_p_2_a,div.produit_p_2_b {
+    background-image:   url('../../img/static/produit/produit_p_2.gif');
+}
+div.produit_n_3_d {
+    background-image:   url('../../img/static/produit/produit_n_3_d.gif');
+}
+div.produit_n_3_i,div.produit_n_3_a,div.produit_n_3_b {
+    background-image:   url('../../img/static/produit/produit_n_3_i.gif');
+}
+div.produit_s_3_d {
+    background-image:   url('../../img/static/produit/produit_s_3_d.gif');
+}
+div.produit_s_3_i,div.produit_s_3_a,div.produit_s_3_b {
+    background-image:   url('../../img/static/produit/produit_s_3_i.gif');
+}
+div.produit_p_3_d,div.produit_p_3_i,div.produit_p_3_a,div.produit_p_3_b {
+    background-image:   url('../../img/static/produit/produit_p_2.gif');
+}
+div.produit_n_4_d {
+    background-image:   url('../../img/static/produit/produit_n_4_d.gif');
+}
+div.produit_n_4_i,div.produit_n_4_a,div.produit_n_4_b {
+    background-image:   url('../../img/static/produit/produit_n_4_i.gif');
+}
+div.produit_s_4_d {
+    background-image:   url('../../img/static/produit/produit_s_4_d.gif');
+}
+div.produit_s_4_i,div.produit_s_4_a,div.produit_s_4_b {
+    background-image:   url('../../img/static/produit/produit_s_4_i.gif');
+}
+div.produit_p_4_d,div.produit_p_4_i,div.produit_p_4_a,div.produit_p_4_b {
+    background-image:   url('../../img/static/produit/produit_p_2.gif');
+}
+div.produit_n_5_d {
+    background-image:   url('../../img/static/produit/produit_n_0_d.gif');
+}
+div.produit_n_5_d_1 {
+    background-image:   url('../../img/static/produit/produit_n_5_d_1.gif');
+}
+div.produit_n_5_i_1, div.produit_n_5_a_1,div.produit_n_5_b_1 {
+    background-image:   url('../../img/static/produit/produit_n_5_i_1.gif');
+}
+div.produit_n_5_d_2 {
+    background-image:   url('../../img/static/produit/produit_n_5_d_2.gif');
+}
+div.produit_n_5_i_2, div.produit_n_5_a_2,div.produit_n_5_b_2 {
+    background-image:   url('../../img/static/produit/produit_n_5_i_2.gif');
+}
+div.detailNormal {
+    background-image:   url('../../img/static/produit/article_normal.gif');
+}
+div.detailNouveau {
+    background-image:   url('../../img/static/produit/article_nouveaute.gif');
+}
+div.detailPromo {
+    background-image:   url('../../img/static/produit/article_promo.gif');
+}
+/*
+Les blocs pour la sortie de caisse - MK - 6/02/2009 
+*/
+div.produit_sc_n_0_d {
+    background-image:   url('../../img/static/produit/produit_sc_n_0_d.gif');
+}
+div.produit_sc_n_0_i,div.produit_sc_n_0_a,div.produit_sc_n_0_b {
+    background-image:   url('../../img/static/produit/produit_sc_n_0_i.gif');
+}
+div.produit_sc_n_1_d {
+    background-image:   url('../../img/static/produit/produit_sc_n_1_d.gif');
+}
+div.produit_sc_n_1_i,div.produit_sc_n_1_a,div.produit_sc_n_1_b {
+    background-image:   url('../../img/static/produit/produit_sc_n_1_i.gif');
+}
+div.produit_sc_n_2_d {
+    background-image:   url('../../img/static/produit/produit_sc_n_2_d.gif');
+}
+div.produit_sc_n_2_i,div.produit_sc_n_2_a,div.produit_sc_n_2_b {
+    background-image:   url('../../img/static/produit/produit_sc_n_2_i.gif');
+}
+div.produit_sc_n_3_d {
+    background-image:   url('../../img/static/produit/produit_sc_n_3_d.gif');
+}
+div.produit_sc_n_3_i,div.produit_sc_n_3_a,div.produit_sc_n_3_b {
+    background-image:   url('../../img/static/produit/produit_sc_n_3_i.gif');
+}
+div.produit_sc_n_3_d {
+    background-image:   url('../../img/static/produit/produit_sc_n_3_d.gif');
+}
+div.produit_sc_n_3_i,div.produit_sc_n_3_a,div.produit_sc_n_3_b {
+    background-image:   url('../../img/static/produit/produit_sc_n_3_i.gif');
+}
+div.produit_sc_n_4_d {
+    background-image:   url('../../img/static/produit/produit_sc_n_4_d.gif');
+}
+div.produit_sc_n_4_i,div.produit_sc_n_4_a,div.produit_sc_n_4_b {
+    background-image:   url('../../img/static/produit/produit_sc_n_4_i.gif');
+}
+div.produit_sc_n_5_d_1 {
+    background-image:   url('../../img/static/produit/produit_sc_n_5_d_1.gif');
+}
+div.produit_sc_n_5_i_1, div.produit_sc_n_5_a_1,div.produit_sc_n_5_b_1 {
+    background-image:   url('../../img/static/produit/produit_sc_n_5_i_1.gif');
+}
+div.produit_sc_n_5_d_2 {
+    background-image:   url('../../img/static/produit/produit_sc_n_5_d_2.gif');
+}
+div.produit_sc_n_5_i_2, div.produit_sc_n_5_a_2,div.produit_sc_n_5_b_2 {
+    background-image:   url('../../img/static/produit/produit_sc_n_5_i_2.gif');
+}
+
+
+p.prodType {
+    background-repeat:  no-repeat;
+    position:           absolute;
+    top:                80px;
+    right:              0;
+    width:              20px;
+    height:             20px;
+    padding:            0;
+    border:             none;
+    font-size:          1px;
+}
+p.prodType_n_1,p.prodType_s_1 {
+    background-image:   none;
+}
+p.prodType_n_2,p.prodType_s_2 {
+    background-image:   url('../../img/static/produit/prodType_2.gif');
+    background-position: 7px 5px;
+}
+p.prodType_n_3,p.prodType_s_3 {
+    background-image:   url('../../img/static/produit/prodType_3.gif');
+    background-position: 4px 0;
+
+}
+div.article h4.nomfamillemaitre {
+    height:             17px;
+    position:           absolute;
+    top:                -15px;
+    left:               0;
+    width:              126px;
+    text-align:         center;
+    font-size:          11px;
+    font-family: verdana;
+    vertical-align: middle;
+}
+div.article img.produit {
+    background-image:   url('../../img/static/global/wait.gif');
+    background-position: 5px 5px;
+    background-repeat:  no-repeat;
+    position:           relative;
+    top:                9px;
+    left:               0;
+    width:              90px;
+    height:             90px;
+}
+div.article p {
+    margin:             0;
+    padding:            0;
+    font-size:          10px;
+}
+div.article p.nomProduit{
+    position:           relative;
+    top:                10px;
+}
+div.article span.label1 {
+    font-family:        verdana, sans-serif;
+    font-weight:        bold;
+    font-size:          9px;
+    color:              #ff4600;
+    background-color:   inherit;
+}
+
+div.article p.prixProduit {
+    font-family:        verdana, sans-serif;
+    font-weight:        bold;
+    font-size:          11px;
+    color:              #ff4600;
+    text-align:				left;
+    padding-left:		0px;
+    background-color:   inherit;
+}
+
+span.label2 {
+    color: #666;
+    background-color: inherit;
+    font-family:        verdana;
+    font-size:          9px;
+}
+div#blocs_articles p.prixProduit {
+    position:           absolute;
+    bottom:             8px;
+    left:               25px;
+}
+span.prixPromo {
+    text-decoration:    line-through;
+    background-color:   inherit;
+    color:              #666;
+    font-weight:        normal;
+    font-style:         italic;
+    position:           absolute;
+    left:               0;
+    top:                -10px;
+}
+
+div.article p.boutonsArticle {
+    position:           absolute;
+    top: 135px;
+    left:75px;
+}
+/*
+Pour le carrousel - MK - 9/02/2009
+Pour repositionner correctement les zones cliquables du carrousel
+*/
+div.article p.repositionnement {
+/* deprecated MK-18/03/2009 */
+}
+p.boutonsArticle a img.ajoutListe {
+    position:           absolute;
+    top:                -1px;
+    left:               5px;
+    width:              21px;
+    height:             22px;
+    margin:             1px;
+}
+
+/* prit en compte que par Firefox IE6 et IE7 ne le gï¿½rent pas */ 
+p.boutonsArticle a img.ajoutPanier {
+    position:           absolute;
+    top: -2px;
+    left: 25px;
+    width:              21px;
+    height:             22px;
+    margin:             0;
+    /* Pour dï¿½bug retirer la ligne ci dessous */
+    /* background-color:blue; */
+}
+select#ssfamilles, select#ssfamilles option {
+    font-family:        verdana;
+    font-size:          10px;
+    font-weight:        bold;
+    color:              #808080;
+    background-color:   #fff;
+}
+p#nombreArticles, p#suggestions {
+	font-family: verdana;
+    font-size:          10px;
+    font-weight:        bold;
+    color:              #666;
+    background-color:   inherit;
+}
+p#suggestions {
+    position:           relative;
+    top:                10px;
+    clear:              left !important;
+    margin:             5px 0 30px 0;
+    text-align:         left;
+    padding-left:		20px;
+    width:              100%;
+    font-size:          10px;
+    line-height:        30px;
+    font-family:        verdana, helvetica, sans-serif;
+    margin-bottom:		80px;
+}
+
+.bagSpace {
+	display: inline-block;
+	font-size:          30px;
+	text-align:         center;
+	color:	#FF0000;
+	vertical-align: middle;
+}
+
+.infoSortieCaissePdr{
+	color: #FF0000;
+	font-weight:        bold;
+}	

@@ -1,0 +1,56 @@
+/**
+ * Projet AD - Version 1.15
+ */
+div#tooltip {
+    margin:             0;
+    padding:            0.2em;
+    position:           absolute;
+    border:             1px solid #f93;
+    background-color:   #fff;
+    color:              #000;
+    z-index:            5150;
+}
+div#tooltip *{
+    margin:             0;
+    padding:            0;
+    display:            block;
+    background-color:   inherit;
+}
+.tooltip_carroussel {
+    color:              #666;
+    font-size:          11px;
+}
+
+.tooltip_article {
+    color:              #666;
+    font-weight:        normal;
+    position:           relative;
+    font-size:          11px;
+}
+/*
+.art_condlib {
+    position:           absolute;
+    bottom:             17px;
+}
+*/
+.tooltip_unite {
+    font-weight:        bold;
+    /*
+    position:           absolute;
+    bottom:             3px;
+    */
+    color:              #666;
+    font-size:          11px;
+    width:              230px;
+}
+.tooltip_panier {
+    color:              #666;
+    font-size:          10px;
+    width:              130px;
+}
+.tooltip_marque {
+    font-weight:        bold;
+    color:              #FF4600;
+    font-size:          10px;
+    width:              130px;
+}

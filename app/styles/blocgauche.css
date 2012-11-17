@@ -1,0 +1,50 @@
+/**
+ * Projet AD - Version 1.15
+ */
+div#blocgauche {
+    position:           relative;
+    width:              200px;
+    height:             400px;
+    float:              left;
+}
+/* Bloc des garanties (page d'accueil, visiteur non client, bas gauche) */
+div#garanties {
+	position:           relative;
+	display:			none; /* MK - 25/03/2009 Désactivation des bannières gauches */
+	top:                67.5px;
+	width:              244px;
+	height:             360px;
+	float:              left;
+	padding:            0 5px;
+}
+div#garanties img#banTarifs {
+    position:           relative;
+    left:               2px;
+    top:                0;
+    width:              240px;
+    height:             160px;
+    margin-top:         1em;
+}
+#listeGaranties {
+    background-image:   url('../../img/accueil/ad.gif');
+    background-repeat:  no-repeat;
+    background-position: 0 0;
+    position:           relative;
+    left:               2px;
+    top:                10px;
+    width:              240px;
+    height:             160px;
+    padding:            12px 0 5px 25px;
+}
+#listeGaranties ul {
+    list-style:         url('../../img/accueil/puce_garantie.gif') outside;
+}
+#listeGaranties ul li {
+    font-family:        arial;
+    font-size:          11px;
+}
+#listeGaranties ul li a {
+    color:              #fe8300;
+    background-color:   inherit;
+    font-weight:        bold;
+}

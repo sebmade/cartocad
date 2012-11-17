@@ -1,0 +1,178 @@
+/**
+ * Projet AD - Version 1.15
+ */
+/* Carroussel */
+div#carroussel {
+    position:           absolute;
+    top:                49px;
+    left:               0;
+    height:             73px;
+    width:              100%;
+    clear:              left;
+    overflow:           hidden;
+    background-image:   url('../../img/carroussel/fondbascarroussel.gif');
+    background-repeat:  repeat-x;
+    background-position: 0 55px;
+}
+div#carroussel span#flechegauche {
+    display:            block;
+    width:              40px;
+    height:             75px;
+    background-image:   url('../../img/carroussel/left.gif');
+    background-repeat:  no-repeat;
+    background-position: 0 0;
+    position:           absolute;
+    top:                0;
+    left:               0;
+    z-index:            20;
+}
+div#carroussel span#flechedroite {
+    display:            block;
+    width:              40px;
+    height:             73px;
+    background-image:   url('../../img/carroussel/right.gif');
+    background-repeat:  no-repeat;
+    background-position: top right;
+    position:           absolute;
+    top:                0;
+    right:              -1px;
+    z-index:            21;
+}
+
+div#carroussel span#flechegauche a img {
+    display:            block;
+    position:           absolute;
+    top:                19px;
+    left:               10px;
+    height:             24px;
+    width:              14px;
+    border:             none;
+}
+div#carroussel span#flechedroite a img {
+    display:            block;
+    position:           absolute;
+    top:                19px;
+    left:               16px;
+    height:             24px;
+    width:              14px;
+    border:             none;
+}
+/* Tableau du carroussel des familles de produits */
+table#carrousselfamilles {
+    border-collapse:    collapse;
+    border:             none;
+    margin:             0;
+    padding:            0;
+}
+table#carrousselfamilles * {
+    margin:             0;
+    padding:            0;
+}
+table#carrousselfamilles tr td {
+    vertical-align:     top;
+    margin:             0;
+    padding:            0;
+    position:           relative;
+    text-align:         center;
+    width:              95px;
+}
+tr.imgcarroussel td {
+    height:             54px;
+    vertical-align:     bottom;
+    background-image:   url('../../img/carroussel/wait.gif');
+    background-repeat:  no-repeat;
+    background-position: 15px 5px;
+    font-size:          9px;
+    text-decoration:    none;
+}
+table#carrousselfamilles tr td.labelback {
+    height:             19px;
+    vertical-align:     top;
+    margin:             0;
+    padding:            0;
+    overflow:           hidden;
+}
+tr.imgcarroussel td img {
+    position:           relative;
+    bottom:             -3px;
+    border:             none;
+    z-index:            1;
+}
+tr.imgcarroussel td.labelback img {
+    position:           relative;
+    top:                0;
+    left:               0;
+    width:              95px;
+    height:             19px;
+    margin:             0;
+    float:              none;
+    z-index:            200;
+}
+table#carrousselfamilles  tr td.labelback a {
+    position:           relative;
+    top:                -20px;
+    left:               5px;
+    line-height:        15px;
+    display:            block;
+    float:              left;
+    width:              90px;
+}
+table#carrousselfamilles a span {
+    position:           absolute;
+    top:                -50px;
+    left:               0;
+    height:             32px;
+    color:              #000;
+    background-color:   #ffedc4;
+    border:             1px solid #ec870e;
+    z-index:            500;
+    font-weight:        normal;
+    line-height:        1em;
+    padding-top:        3px;
+}
+a.labeltext {
+    display:            block;
+    text-align:         center;
+    height:             19px;
+    line-height:        19px;
+    width:              100px;
+    padding:            0 0 0 5px;
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    font-family:        verdana, helvetica, sans-serif;
+    font-size:          9px;
+    font-weight:        bold;
+    color:              #666;
+    background-color:   transparent;
+    text-decoration:    none;
+    margin:             0;
+    padding:            0;
+    position:           absolute;
+    left:               5px;
+    z-index:            210;
+}
+.helptext  {
+    font-size:          9px;
+    color:              #666;
+    text-decoration:    none;
+}
+.tabback   {
+    background-image:   url('http://www.auchandirect.fr/images/static/divers/topnav/tab.gif');
+    background-repeat:  no-repeat;
+    padding-bottom:     2px;
+    text-align:         center;
+}
+.tabtext   {
+    font-family:        arial, helvetica, sans-serif;;
+    font-size:          11px;
+    font-weight:        bold;
+    text-decoration:    none;
+}
+div#carrousselfp {
+    position:           absolute;
+    top:                0;
+    left:               30px;
+    overflow:           hidden;
+    padding:            0 10px 0 20px;
+    margin:             0 -15px 0 -10px;
+    z-index:            10;
+}

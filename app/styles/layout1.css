@@ -1,0 +1,567 @@
+/**
+ * Projet AD - Version 1.15
+ */
+html {
+    font-size:          1em;
+}
+html * {
+    font-family:        arial, helvetica, sans-serif;
+}
+body {
+    margin:             0;
+    font-size:          80%;
+    background-image:   url('../../img/carroussel/topleft.gif');
+    background-position: 0 2px;
+    background-repeat:  no-repeat;
+    overflow:           auto;
+}
+body * {
+    margin:             0;
+    padding:            0;
+}
+/* Positionnement des blocs principaux : découpage global de la page. */
+div#hautpage {
+    position:           relative;
+    height:             150px;
+    background-image:   url('../../img/carroussel/bottom.gif');
+    background-repeat:  no-repeat;
+    background-position: 0 122px;
+    top: 55px;
+}
+/* Bloc des bannières du haut de page */
+div#bannieresTopNav {
+	/*
+    position:           absolute;
+    top:                0;
+    left:               280px;
+    width:              550px;
+    height:             42px;
+    padding:            0;
+    */
+}
+/* Bloc des bannières droite (en haut du panier) */
+div#bannieresPanier {
+    padding-top:        3px;
+    position:           absolute;
+    width:              215px;
+    top:                150px;
+    right:              0;
+    z-index:            1050;
+    color:              inherit;
+    background-color:   inherit;
+    text-align:         center;
+    z-index:            5000;
+}
+div#index {
+    position:           relative;
+    /* top:                0; */
+    top:				55px;
+    /* margin:             0 215px 0 0; */ /* MK */
+ 	margin:             0 320px 0 0; /* MK */
+    clear:              both;
+    /* height:             100%; */
+    height:				115px;
+    /* border:				1px solid #000000; */
+}
+div#bandeau_accueil {
+    position:           relative;
+    width:              100%;
+    /* height:             168px; */
+    height:				115px;
+    /*color:              #1a5a69;*/
+	 color:              #ffffff;
+    background-color:   #63af24;
+    overflow:           hidden;
+    background-image:   url('../../img/accueil/bandeauaccueil_bg.gif');
+    background-position: 0 160px;
+    background-repeat:  no-repeat;
+    /* Pour décaler vers le bas */ /* top:55px; */
+}
+table#tab_bandeau_accueil {
+    position:           relative;
+    width:              100%;
+    /* height:             168px; */
+    height:				115px;
+    /*color:              #1a5a69;*/
+	 color:              #ffffff;
+    background-color:   #63af24;
+    overflow:           hidden;
+    background-image:   url('../../img/accueil/bandeauaccueil_bg.gif');
+    background-position: 0 160px;
+    background-repeat:  no-repeat;
+    /* Pour décaler vers le bas */ /* top:55px; */
+}
+div#bandeau_accueil_familles {
+    position:           relative;
+    height:             64px;
+    overflow:           hidden;
+}
+div#blocCentral {
+    position:           relative;
+    /* top:                64px; */
+    top:				0px;
+    margin:             0;
+    z-index:            90;
+}
+div#panierPersistant {
+    width:              212px;
+    height:             300px;
+    clear:              right;
+    position:           absolute;
+    bottom:             0;
+    right:              0;
+    z-index:            5100;
+    color:              inherit;
+    /* background-color:   #fff; */
+    background-color:	none;
+}
+div#piedpage {
+    position:           relative;
+    clear:              both;
+    height:             100px;
+}
+div#bloccentral h3 {
+    position:           relative;
+    top:                0;
+    left:               0;
+    font-size:          16px;
+    text-align:         center;
+    height:             24px;
+    line-height:        24px;
+}
+
+/* Logo AuchanDirect (en haut à gauche de chaque page), lien retour vers la page d'accueil */
+#hautpage a#retouraccueil {
+	position:			relative;
+    display:            block;
+    top:                -55px;
+    left:               0;
+    width:				260px;
+    height:             45px;
+    border:             none;
+    margin:             0;
+    z-index:100;
+}
+#hautpage a#retouraccueil img {
+	position:			relative;
+	top:				0;
+	left:				0;
+    width:              250px;
+    height:             45px;
+    border:             none;
+    margin:             0;
+}
+/* Bloc de recherche en haut à droite. */
+ul#menutop {
+    position:           absolute;
+    top:                0;
+    left:              0;
+    width:              262px;
+    height:             47px;
+    background-image:   url('../../img/carroussel/topright_new.gif');
+    background-repeat:  no-repeat;
+    background-position: 0 2px;
+    text-align:         right;
+    list-style:         none;
+    font-size:          0.75em;
+    margin:             0;
+    padding:            0;
+}
+ul#menutop li {
+    display:            block;
+    float:              left;
+    width:              55px;
+    margin-left:        5px;
+    padding-left:       0;
+}
+ul#menutop li.liens_top {
+	/* DESACTIVE 19/03/2009 */
+	/* display:none; */
+    position: relative;
+    left: 17px;
+}
+ul#menutop li a img {
+    border:             none;
+}
+li#li_img_aide_nav img#img_aide_nav {
+    position:           absolute;
+    bottom:             0;
+    left:               25px;
+    width:              140px;
+    height:             20px;
+    border:             none;
+}
+p#aidenav {
+    position:           absolute;
+    left:				20px;
+    top:                0;
+    width:              160px;
+    height:             60px;
+    font-size:          9px;
+    text-align:         center;
+    font-family: verdana;
+    color:              #666;
+    background-color:   #fff;
+    border-top:         none;
+    background-image:   url('../../img/carroussel/help.gif');
+    background-repeat:  no-repeat;
+    background-position: 0 0;
+    z-index:            500;
+    margin:             0;
+}
+/* Bloc de recherche */
+div#barrerecherche {
+    background-image:   url('../../img/carroussel/loupe.gif');
+    background-repeat:  no-repeat;
+    background-position: 3px 3px;
+    padding:            3px 0 0 25px;
+    position:           absolute;
+    bottom:             -2px;
+    left:               0;
+    width:              300px;
+    height:             25px;
+}
+div#barrerecherche label {
+    display:            inline;
+    color:              #ff4600;
+    background-color:   inherit;
+    line-height:        25px;
+    font-family:        arial;
+    font-weight:        bold;
+    font-size:          12px;
+    float:              left;
+    margin:             0 10px 0 0;
+}
+/* Formulaire de recherche */
+form#chercher a#lienastuces img {
+    width:              20px;
+    height:             20px;
+    float:              none;
+    border:             none;
+    position:           absolute;
+    left:               2px;
+}
+form#chercher p {
+    margin:             0;
+    padding:            0;
+}
+form#chercher input#recherche {
+    font-family:        verdana;
+    font-size:          10px;
+    position:           relative;
+    top:                -3px;
+    border:             1px solid #ccc;
+    margin:             0;
+    width:              150px;
+    height:             14px;
+}
+form#chercher input#rechercher {
+    width:              21px;
+    height:             20px;
+    border:             none;
+    background-position: 0 0;
+    background-repeat:  no-repeat;
+    color:              inherit;
+    background-color:   #fff;
+    cursor:             pointer;
+}
+/* Onglets  de droite */
+#menuTopAccueil {
+    position:           absolute;
+    bottom:             0;
+    right:              10px;
+    margin:             0;
+}
+ul#menuTopAccueil li {
+    display:            block;
+    float:              left;
+    width:              85px;
+    height:             22px;
+    text-align:         center;
+    background-image:   url('../../img/carroussel/tab.gif');
+    background-position: 0 0;
+    background-repeat:  no-repeat;
+}
+
+
+ul#menuTopAccueil li.myauchandirect {
+	
+    display:            block;
+    float:              left;
+    width:              124px;
+    height:             22px;
+    text-align:         center;
+    background-image:   url('../../img/carroussel/tab_large.gif');
+    background-position: 0 0;
+    background-repeat:  no-repeat;
+}
+
+ul#menuTopAccueil li a {
+    line-height:        22px;
+    color:              #ff8400;
+    background-color:   inherit;
+    font-weight:        bold;
+    font-size:          11px;
+    text-decoration:    none;
+    border:             none;
+    font-family:        Arial;
+}
+ul#menuTopAccueil li a.vert {
+    color:              #8cae31;
+    background-color:   inherit;
+}
+a img {
+    border: none;
+}
+
+hr.infos {
+    clear:              both;
+    visibility:         hidden;
+    margin-top:         230px;
+}
+
+/* Styles de polices et mise en forme des textes */
+*.gras {
+    font-weight:        bold;
+}
+*.blanc   {
+    color:              #fff;
+    background-color:   inherit;
+    font-size:          13px;
+    text-align:         center;
+}
+*.blancb   {
+    color:              #fff;
+    background-color:   inherit;
+    font-size:          13px;
+    text-align:         center;
+    font-weight:        bold;
+}
+*.gris    {
+    color:              #666;
+    background-color:   inherit;
+    font-weight:        bold;
+    font-size:          11px;
+    text-align:         left;
+}
+*.grisb   {
+    color:              #666;
+    background-color:   inherit;
+    font-weight:        bold;
+    font-size:          11px;
+    text-align:         left;
+    font-weight:        bold;
+}
+*.grisl   {
+    color:              #666;
+    background-color:   inherit;
+    font-weight:        normal;
+    font-size:          11px;
+    text-align:         justify;
+}
+*.noir    {
+    color:              #000;
+    background-color:   inherit;
+    font-weight:        normal;
+    font-size:          10px;
+}
+*.rouge   {
+    color:              #ff4600;
+    background-color:   inherit;
+    font-weight:        bold;
+    font-size:          11px;
+}
+*.rougel  {
+    color:              #ff4600;
+    background-color:   inherit;
+    font-weight:        normal;
+    font-size:          11px;
+}
+*.rougeb1  {
+    color:              #ff4600;
+    background-color:   inherit;
+    font-size:          12px;
+    font-weight:        bold;
+}
+*.rougeb  {
+    color:              #ff4600 !important;
+    background-color:   inherit;
+    font-size:          13px;
+    font-weight:        bold;
+}
+*.orange  {
+    font-family:        arial;
+    font-size:          10px;
+    color:              #ff8400;
+    background-color:   inherit;
+    font-weight:        normal;
+    text-align:         justify;
+}
+*.orange2  {
+    font-family:        arial;
+    font-size:          11px;
+    color:              #ff8400;
+    background-color:   inherit;
+    font-weight:        bold;
+    text-align:         justify;
+}
+*.orangeb  {
+    font-family:        arial;
+    font-size:          12px;
+    color:              #ff8400;
+    background-color:   inherit;
+    font-weight:        bold;
+}
+*.orangebl  {
+    font-family:        arial;
+    font-size:          12px;
+    color:              #ff8400;
+    background-color:   inherit;
+    font-weight:        bold;
+    text-align:         left;
+}
+*.input1  {
+    height:             18px;
+    font-family:        arial;
+    font-size:          11px;
+    color:              #666;
+    background-color:   inherit;
+}
+*.bleu, *.bleu a    {
+    color:              #1F6677;
+    background-color:   inherit;
+    font-size:          13px;
+}
+*.gras {
+    font-weight:        bold;
+}
+*.txt10   {
+    font-size:          10px;
+}
+*.txt11   {
+    font-size:          11px;
+    /* MK */
+    font-weight:		100;
+}
+*.txt12   {
+    font-size:          12px;
+}
+*.txt13   {
+    font-size:          13px;
+}
+*.souligne {
+    text-decoration:    underline;
+}
+*.centre {
+    text-align:         center;
+}
+*.soulign {
+    text-decoration:    underline;
+}
+/* Titre de la page */
+p#titrepage {
+    height:             46px;
+    background-image:   url('../../img/static/global/points.gif');
+    background-position: 0 37px;
+    background-repeat:  repeat-x;
+    position:           relative;
+    top:                5px;
+    left:               0;
+}
+/* Titre de la page, en classe, car on doit en utiliser 2 sur la page de résultats de recherche (1 pour votre recherche et 1 pour les astuces) */
+p.titrepage {
+    height:             46px;
+    background-image:   url('../../img/static/global/points.gif');
+    background-position: 0 37px;
+    background-repeat:  repeat-x;
+    position:           relative;
+    top:                5px;
+    left:               0;
+}
+p#suggestions {
+    position:           relative;
+    top:                20px;
+    margin-bottom:      30px;
+}
+p#suggestions a {
+	font-family: verdana;
+	font-size: 10px;
+    color:              #ff4600;
+    background-color:   inherit;
+}
+html {
+    font-size:          1em;
+}
+html * {
+    font-family:        arial, helvetica, sans-serif;
+}
+body {
+    margin:             0;
+    font-size:          80%;
+    background-image:   url('../../img/carroussel/topleft_new.gif');
+    background-position: 0 2px;
+    background-repeat:  no-repeat;
+    overflow:           auto;
+}
+body * {
+    margin:             0;
+    padding:            0;
+}
+/* Positionnement des blocs principaux : découpage global de la page. */
+div#hautpage {
+    position:           relative;
+    height:             150px;
+    background-image:   url('../../img/carroussel/bottom.gif');
+    background-repeat:  no-repeat;
+    background-position: 0 122px;
+}
+/* Bloc de publicité de gauche en page d'accueil pour visiteur non client */
+img.img_pub_accueil {
+    display:            block;
+}
+/* Bloc des bannières du haut de page */
+div#bannieresTopNav {
+	float:right;
+    width:              728px;
+    height:             90px;
+    margin: 5px 5px 0px 0px;
+}
+/* Bloc qui contient la bannière publicitaire MK 20/03/2009 */
+div#master_iab{
+    position:           absolute;
+top:-55px;
+left:0;
+width:100%;
+height:100px;
+min-width:1000px;
+}
+
+* html .element {
+   /* margin-left:300px; */ /* Lu uniquement par IE 6 */
+}
+/* Bloc des bannières droite (en haut du panier) */
+div#bannieresPanier {
+    padding-top:        3px;
+    position:           absolute;
+    /* width:              215px; */
+    width:				300px;
+    /* top:                150px; */
+    top:				200px;
+    right:              0;
+    z-index:            1050;
+    color:              inherit;
+    background-color:   inherit;
+    text-align:         center;
+    z-index:            5000;
+    /* MK */
+    margin-right:		10px;
+    margin-top:			5px;
+    height:				250px;
+}
+/* Style du champ de recherche */
+input#sMotsRecherche {
+	font-family: verdana, sans-serif;
+	font-size: 10px;
+	width: 165px;
+	padding: 1px;
+}

@@ -1,0 +1,283 @@
+/**
+ * Projet AD - Version 1.15
+ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Bandeau de haut de page d'accueil              */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+img#panneau_accueil {
+    width:              322px;
+    height:             168px;
+    position:           absolute;
+    top:                0;
+    right:              -1px;
+    margin:             0;
+    z-index:            50;
+}
+div#bandeau_accueil ul#infosAccueil {
+    position:           relative;
+    top:                0;
+    left:               5px !important;
+    list-style-image:   url('../../img/static/global/puceBandeauAccueil.gif');
+    margin-left:        10px;
+    padding-left:       25px;
+    z-index:			200; /* MK */
+}
+div#bandeau_accueil ul#infosAccueil li {
+    line-height:        14px;
+}
+
+/*
+div#bandeau_accueil ul#infosAccueil li#li3, div#bandeau_accueil ul#infosAccueil li#li4 {
+    line-height:        24px;
+    height:             30px;
+}
+*/
+div#bandeau_accueil ul#infosAccueil li * {
+    /*color:              #1a5a69;*/
+    color:              #ffffff;
+    background-color:   inherit;
+    font-family:        Arial;
+    font-size:          11px;
+}
+div#bandeau_accueil ul#infosAccueil li span.gras, div#bandeau_accueil ul#infosAccueil li span.gras a {
+    font-family:        Arial;
+    font-size:          12px;
+    font-weight:        bold;
+}
+
+div#bandeau_accueil ul#infosAccueil li span.gras-blanc {
+	color : 					#ffffff;
+	font-size : 			12px;
+	font-weight:				bold;
+	font-family:        Arial;
+}
+
+div#bandeau_accueil ul#infosAccueil li span.gras a {
+    font-size:          11px;
+    padding-top:        25px;
+}
+img#bandeauaccueil {
+    color:              #000;
+    background-color:   #fff;
+    position:           relative;
+    left:               0;
+    top:                0;
+    width:              168px;
+    height:             41px;
+}
+p#bandeauaccueilidentifie {
+    position:           relative;
+    left:               0;
+    top:                0;
+    width:              387px;
+    /* height:             40px; */
+    height:				35px; /* MK */
+    /* margin-bottom:      25px; */
+    margin-bottom:		0px;
+    background-color:   #63af24;
+    /*background-image:   url('../../img/static/home/hautgauchebandeau.gif');*/
+    background-position: 0 0;
+    background-repeat:  no-repeat;
+}
+p.identifie a {
+    /*color:              #1a5a69;*/
+    color:              #ffffff;
+    background-color:   inherit;
+}
+p.identifie {
+    position: relative;
+    /* top:				-20px;*/ /* MK - 35/03/2009 */
+    margin-left:        30px;
+    font-family:        arial, helvetica, sans-serif;
+    z-index:            500;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Bandeau de haut de contenu sauf page d'accueil */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+div#bandeau_accueil_famille, div#bandeau_moncompte, div#bandeau_service {
+    position:           relative;
+    height:             64px;
+    /* top:                58px; */
+    top:				0px;/* MK */
+    left:               0;
+    background-position: 0 0;
+    background-repeat:  no-repeat;
+}
+div#bandeau_accueil_famille {
+    margin-bottom: 5px;
+}
+div#bandeau_moncompte, div#bandeau_service {
+    color:              inherit;
+    background-color:   #63af24;
+    background-image:   url('../../img/static/bandeau/univ_img.gif');
+}
+div#bandeau_accueil_famille p, div#bandeau_moncompte p  {
+    position:           absolute;
+    /* top:                25px; */
+    top:				5px;
+    left:               175px;
+    font-weight:        bold;
+    font-family:        arial;
+    font-size:          13px;
+}
+div#bandeau_moncompte a  {
+    color:          #ffffff;
+}
+div#bandeau_accueil_famille p.avecform {
+    top:                15px;
+}
+/**
+ * DÃ©tails pour le bandeau selon la famille affichÃ©e
+ * On profitera Ã©galement de ce fichier pour ajuster les
+ * couleurs d'autres Ã©lÃ©ments propres Ã  la famille concernÃ©e
+ */
+div#bandeau_accueil_famille.promotion {
+    color:                  #fff;
+    background-color:       #ff090a;
+}
+div#bandeau_accueil_famille.promotion span.choixAffiche {
+    color:                  #fff4bf;
+    background-color:       inherit;
+    text-decoration:        underline;
+}
+div#bandeau_accueil_famille.nouveaute {
+    background-image:       url('../../img/static/banniere/2.jpg');
+    color:                  #fff;
+    background-color:       #8cae31;
+}
+div#bandeau_accueil_famille.nouveaute span.choixAffiche {
+    color:                  #eefec4;
+    background-color:       inherit;
+}
+
+p.votreChoix a {
+    text-decoration:        none;
+    color:                  inherit;
+    background-color:       inherit;
+}
+form#liste_ssfamille {
+    position:               relative;
+    top:                    33px;
+    left:                   100px;
+    left:                   200px;
+    width:                  300px;
+}
+form#liste_ssfamille fieldset{
+    border:                 none;
+    width: 440px;
+}
+form#liste_ssfamille select {
+    border:                 1px solid #ccc;
+    margin-left: 60px;
+}
+form#liste_ssfamille img#retour {
+    position:               relative;
+    top:                    4px;
+    left:                   2px;
+    width:                  56px;
+    height:                 17px;
+}
+/* Position de la banniÃ¨re dans le bandeau */
+div#bannieresFamille {
+    display:                inline;
+    position:               absolute;
+    right:                  1px;
+    line-height:            62px;
+    margin-right: 12px;
+    margin-top: 3px;
+}
+
+/* Bandeau Service */
+form#navigation {
+    position:                absolute;
+    top:                    0px;
+    left:                    170px;
+}
+form#navigation span.bleu, form#navigation span.blanc{
+    font-weight:            bold;
+}
+form#navigation select {
+    color:                  #666;
+    background-color:       #fff !important;
+}
+ul.sommaire1 {
+    position:               absolute;
+    top:                    47px;
+    left:                   170px;
+    list-style-type:        none;
+    display:                inline;
+}
+ul.sommaire1 li{
+    list-style-type:        none;
+    display:                inline;
+    font-weight:            bold;
+    /* margin-right:           2.5em; */
+    margin-right:			20px; /* MK */
+}
+ul.sommaire1 li a {
+    /*color:                  #ff8600 !important;*/
+    color:                  #ffffff !important;
+    background-color:       inherit;
+    font-family: arial;
+    font-size: 12px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Bandeau de haut de contenu sauf page d'accueil */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Banniere,Pub Illustration CLIENT (0,1,2) et GUEST (3,4)*/
+ul.pubFonc_3_0, ul.pubFonc_3_1, ul.pubFonc_3_2, ul.pubFonc_3_3, ul.pubFonc_3_4 {
+	position:               absolute;
+	right:                  0px;
+	top:                    0px;
+}
+/* MK - 24/03/2009 */
+ul.pubFonc_3_3{
+	width:					157px;
+	/* height:					115px; */
+}
+/* Banniere,Pub Fonctionnelle GUEST (2,3,4)*/
+ul.pubFonc_1_3, ul.pubFonc_1_4, ul.pubFonc_1_2 {
+    position:               absolute;
+    left:                   168px;
+    top:                    1px;
+    display:				none /* MK - 24/03/2009 */
+}
+/* Banniere,Pub Fonctionnelle CLIENT (0,1)*/
+ul.pubFonc_1_0, ul.pubFonc_1_1 {
+    position:               absolute;
+    left:                   5px;
+    top:                    1px;
+    /* height:                 40px; */
+    height:					35px; /* MK */
+}
+ul.pubFonc_1_0, ul.pubFonc_1_1 li.pubFonc {
+    display:            block;
+    float:              left;
+    margin:             0 5px;
+}
+li.pubFonc {
+    display:            block; /* DEBUG */ 
+    /* display:			none; */
+    float:              left;
+    margin:             0;
+}
+li.pubFonc a{
+    text-decoration:    none;
+    display:            table-cell;
+    vertical-align:     middle;
+}
+li.pubFonc span{
+    color:              #ffffff;
+    font-size:          11px;
+    font-family:        Arial;
+    text-decoration:    underline;
+    position:           relative;
+    top:                -16px;
+}
+/* MK - 25/03/2009 (ajout)*/
+.marginTop10{
+	margin-top:	10px;
+}
