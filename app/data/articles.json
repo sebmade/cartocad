@@ -1,87 +1,163 @@
 [
   {
-    "name":"LE POULET FERMIER",
-    "mark":"Label Rouge",
-    "price":"6.90",
-    "img":"/images/articles/m_00004276.gif",
-    "id":"4276"
+    "name":"CARLSBERG BEER",
+    "mark":"Bière blonde",
+    "price":"8.77",
+    "img":"/images/articles/m_00074599.gif",
+    "id":"74599",
+    "from":0,
+    "note":10,
+    "pin":true
   },
   {
-    "name":"FERMIERS DE LOUE",
-    "mark":"Label Rouge",
-    "price":"8.90",
-    "img":"/images/articles/m_00004272.gif",
-    "id":"4272"
+    "name":"GRIMBERGEN",
+    "mark":"Bière rouge 6°",
+    "price":"1.60",
+    "img":"/images/articles/m_00099437.gif",
+    "id":"99437",
+    "from":-2,
+    "note":-10,
+    "pin":false
   },
   {
-    "name":"LE GAULOIS",
-    "mark":"Roti de dinde filet",
-    "price":"7.90",
-    "img":"/images/articles/m_00004286.gif",
-    "id":"4286"
+    "name":"DESPERADOS",
+    "mark":"Blonde",
+    "price":"9.50",
+    "img":"/images/articles/m_00100149.gif",
+    "id":"100149",
+    "from":0,
+    "note":10,
+    "pin":true
   },
   {
-    "name":"LE POULET FERMIER",
-    "mark":"Label Rouge",
-    "price":"6.90",
-    "img":"/images/articles/m_00004276.gif",
-    "id":"4276"
+    "name":"HOEGAARDEN",
+    "mark":"Bière blanche 5°",
+    "price":"4.26",
+    "img":"/images/articles/m_00100317.gif",
+    "id":"100317",
+    "from":-5,
+    "note":60,
+    "pin":false
   },
   {
-    "name":"FERMIERS DE LOUE",
-    "mark":"Label Rouge",
-    "price":"8.90",
-    "img":"/images/articles/m_00004272.gif",
-    "id":"4272"
+    "name":"HEINEKEN",
+    "mark":"Bière blonde",
+    "price":"5.02",
+    "img":"/images/articles/m_00100385.gif",
+    "id":"100385",
+    "from":0,
+    "note":60,
+    "pin":false
   },
   {
-    "name":"LE GAULOIS",
-    "mark":"Roti de dinde filet",
-    "price":"7.90",
-    "img":"/images/articles/m_00004286.gif",
-    "id":"4286"
+    "name":"LEFFE",
+    "mark":"Blonde",
+    "price":"8.48",
+    "img":"/images/articles/m_00100409.gif",
+    "id":"100409",
+    "from":30,
+    "note":60,
+    "pin":false
   },
   {
-    "name":"LE POULET FERMIER",
-    "mark":"Label Rouge",
-    "price":"6.90",
-    "img":"/images/articles/m_00004276.gif",
-    "id":"4276"
+    "name":"GRIMBERGEN",
+    "mark":"Bière blonde 6.7°",
+    "price":"5.01",
+    "img":"/images/articles/m_00100415.gif",
+    "id":"100415",
+    "from":10,
+    "note":6,
+    "pin":false
   },
   {
-    "name":"FERMIERS DE LOUE",
-    "mark":"Label Rouge",
-    "price":"8.90",
-    "img":"/images/articles/m_00004272.gif",
-    "id":"4272"
+    "name":"1664",
+    "mark":"Bière blonde",
+    "price":"1.81",
+    "img":"/images/articles/m_00100546.gif",
+    "id":"100546",
+    "from":10,
+    "note":60,
+    "pin":false
   },
   {
-    "name":"LE GAULOIS",
-    "mark":"Roti de dinde filet",
-    "price":"7.90",
-    "img":"/images/articles/m_00004286.gif",
-    "id":"4286"
+    "name":"GEORGE KILLIAN'S",
+    "mark":"Bière rousse 6.5°",
+    "price":"4.95",
+    "img":"/images/articles/m_00100560.gif",
+    "id":"100560",
+    "from":4,
+    "note":60,
+    "pin":false
   },
   {
-    "name":"LE POULET FERMIER",
-    "mark":"Label Rouge",
-    "price":"6.90",
-    "img":"/images/articles/m_00004276.gif",
-    "id":"4276"
+    "name":"3 MONTS",
+    "mark":"Bière blonde 8.7°",
+    "price":"3.14",
+    "img":"/images/articles/m_00100596.gif",
+    "id":"100596",
+    "from":3,
+    "note":60,
+    "pin":false
   },
   {
-    "name":"FERMIERS DE LOUE",
-    "mark":"Label Rouge",
-    "price":"8.90",
-    "img":"/images/articles/m_00004272.gif",
-    "id":"4272"
+    "name":"1664",
+    "mark":"Bière blonde",
+    "price":"5.09",
+    "img":"/images/articles/m_00100732.gif",
+    "id":"100732",
+    "from":10,
+    "note":60,
+    "pin":false
   },
   {
-    "name":"LE GAULOIS",
-    "mark":"Roti de dinde filet",
-    "price":"7.90",
-    "img":"/images/articles/m_00004286.gif",
-    "id":"4286"
+    "name":"KRONENBOURG",
+    "mark":"Bière blonde",
+    "price":"4.53",
+    "img":"/images/articles/m_00100806.gif",
+    "id":"100806",
+    "from":30,
+    "note":60,
+    "pin":false
+  },
+  {
+    "name":"JADE",
+    "mark":"Bière blonde",
+    "price":"6.99",
+    "img":"/images/articles/m_00060789.gif",
+    "id":"60789",
+    "from":10,
+    "note":60,
+    "pin":false
+  },
+  {
+    "name":"LA BECASSE",
+    "mark":"Bière belge",
+    "price":"5.42",
+    "img":"/images/articles/m_00100315.gif",
+    "id":"100315",
+    "from":10,
+    "note":60,
+    "pin":false
+  },
+  {
+    "name":"CORONA",
+    "mark":"Bière blonde",
+    "price":"10.03",
+    "img":"/images/articles/m_00059567.gif",
+    "id":"59567",
+    "from":10,
+    "note":60,
+    "pin":false
+  },
+  {
+    "name":"CH'TI",
+    "mark":"Blonde",
+    "price":"5.54",
+    "img":"/images/articles/m_00049286.gif",
+    "id":"49286",
+    "from":10,
+    "note":60,
+    "pin":false
   }
 
 

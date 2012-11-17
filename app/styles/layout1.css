@@ -541,7 +541,7 @@ min-width:1000px;
 }
 /* Bloc des bannières droite (en haut du panier) */
 div#bannieresPanier {
-    padding-top:        3px;
+    padding-top:        30px;
     position:           absolute;
     /* width:              215px; */
     width:				300px;

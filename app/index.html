@@ -19,17 +19,8 @@
         <link rel="stylesheet" type="text/css" media="all" href="styles/tooltip.css" charset="iso-8859-1" />
         <link rel="stylesheet" type="text/css" media="all" href="styles/panier.css" charset="iso-8859-1" />
         <link rel="stylesheet" type="text/css" media="all" href="styles/articles.css" charset="iso-8859-1" />
-        <script src="scripts/vendor/jquery.min.js"></script>
-        <script src="scripts/vendor/jquery.peity.min.js"></script>
     </head>
     <body ng-app="cartocadApp" ng-controller="MainCtrl">
-
-
-    <script language="javascript">
-        $(document).load( function() {
-            $("span.pie").peity("pie")
-        });
-    </script>
 
     <div id="hautpage"><!-- Bloc supérieur de la page -->
         <a id="retouraccueil" href="#" title="retour à l'accueil AuchanDirect"><img src="images/espaceur.gif" title="Retour à l'accueil AuchanDirect" alt="Retour à l'accueil AuchanDirect" /></a>
@@ -129,7 +120,23 @@
         </div>
     </div>
     <div id="bannieresPanier">
-
+        <table style="padding: 5px;">
+            <thead>
+                <th colspan="2" style="text-align: center; font-size: 34px;">CartOCad</th>
+            </thead>
+            <tr>
+                <td>
+                    <pie></pie>
+                </td>
+                <td>
+                    <span style="text-align: center; font-size: 64px;">&nbsp;&nbsp;{{note}}%</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; font-size: 12px; font-style: italic">Provenance</td>
+                <td style="text-align: center; font-size: 12px; font-style: italic">Respect de vos préférences</td>
+            </tr>
+        </table>
     </div>
     <div id="index">
     <div id="bandeau_accueil_famille" style="background-image: url('images/15022_banniere.jpg'); background-repeat: no-repeat; color: #3F5F07;  background-color: #82B22C;">
@@ -138,7 +145,7 @@
         </div>
         <p class="avecform">
             <span style="color: #fff; background-color: inherit;">Votre choix : </span>
-            <span style="color: #3F5F07; background-color: inherit;" id="bandeau_label_recherche"><span class="souligne"><a href="#index/catalogue/famille/15022" style="color: #3F5F07; background-color: inherit"><span class="choixAffiche">Le marché  - Volailles</span></a></span></span>
+            <span style="color: #3F5F07; background-color: inherit;" id="bandeau_label_recherche"><span class="souligne"><a href="#index/catalogue/famille/15022" style="color: #3F5F07; background-color: inherit"><span class="choixAffiche">Alcools, Vins - Bières</span></a></span></span>
 
             <span style="color: #3F5F07; background-color: inherit; display:none;" id="bandeau_label_astuce">Recherche &gt; Astuces</span>
         </p>
@@ -151,7 +158,7 @@
                     <option value="15360">Canard - Autres volailles</option>
                     <option value="16944">Volailles cuisinées</option>
                 </select>
-                <a href="#index/catalogue/famille/15022" title="Retour au rayon"><img id="retour" src="#img/bouton/retour_rayon.gif" alt="Retour au rayon" /></a>
+                <a href="#index/catalogue/famille/15022" title="Retour au rayon"><img id="retour" src="images/bouton/retour_rayon.gif" alt="Retour au rayon" /></a>
             </fieldset>
         </form>
     </div>
@@ -171,20 +178,29 @@
         </p>
         <p class="prodType prodType_n_2">&nbsp;</p>
         <p class="boutonsArticle">
-            <a href="#index/listes_ajout/type/p/id/4276" title="Ajouter à la liste" onclick="return(verifInternauteLoggue());"><img src="#/img/espaceur.gif" class="ajoutListe" alt="Ajouter à la liste" /></a>
-            <a title="Ajouter au panier" ng-click="addToCart(a)"><img src="#img/espaceur.gif" class="ajoutPanier" alt="Ajouter au panier" /></a>
+            <a href="#index/listes_ajout/type/p/id/4276" title="Ajouter à la liste" onclick="return(verifInternauteLoggue());"><img src="images/espaceur.gif" class="ajoutListe" alt="Ajouter à la liste" /></a>
+            <a title="Ajouter au panier" ng-click="addToCart(a)"><img src="images/espaceur.gif" class="ajoutPanier" alt="Ajouter au panier" /></a>
         </p>
     </div>
-
     </div>
-    <p id="suggestions">Si vous avez des suggestions de produits, <a href="http://www.auchandirect.fr/frontoffice//index/contact/page/suggestions/" title="Faites-nous part de vos suggestions" class="orangeb txt11">dites-le nous</a> !
-        <div id="cartocad">
-        Cartocad
-
-        <span class="pie">1/5</span>
-
-    </div>
-    </p>
+        <div id="blocs_articles2" ng-show="showAltDiv">
+            <div id="blocProduitp_4276" class="article produit_n_4_d" ng-repeat="a in alts">
+                <p class="imgArticle"><a ng-click="" class="lienArticle" style="width: 90px; height: 90px;"><img class="produit" src="{{a.img}}" alt="" style="width: 90px; height: 90px;" /></a></p>
+                <p id="infoProduitp_4276" class="nomProduit">
+                    <span class="label1">{{a.name}}</span>
+                    <br />
+                    <span class="label2">{{a.mark}}</span>
+                </p>
+                <p class="prixProduit">
+                    <span class="prixPromo" style="display: none;">&nbsp;</span>{{a.price}} &euro;
+                </p>
+                <p class="prodType prodType_n_2">&nbsp;</p>
+                <p class="boutonsArticle">
+                    <a href="#index/listes_ajout/type/p/id/4276" title="Ajouter à la liste" onclick="return(verifInternauteLoggue());"><img src="images/espaceur.gif" class="ajoutListe" alt="Ajouter à la liste" /></a>
+                    <a title="Remplacer" ng-click="switch(a)"><img src="images/espaceur.gif" class="ajoutPanier" alt="Remplacer" /></a>
+                </p>
+            </div>
+        </div>
 
     </div>
 
@@ -197,7 +213,7 @@
             </map>
             <img id="hautpanier" src="images/detailpanier_new.gif" usemap="#detailpanier" alt="" />
             detailpanier
-            <p id="panier_prix">{{total() | currency}}</p>
+            <p id="panier_prix">{{total() | number:2}}</p>
             <form id="formPanier" action="#" method="post" onsubmit="return false;">
                 <div id="panier_contenu">
                     <p id="articlep_4274" ng-repeat="a in cart">
@@ -206,8 +222,8 @@
                         <area shape="rect" coords="0, 10, 9, 19" href="#" alt="Diminuer la quantité" title="Diminuer la quantité" onclick="oPanier._delArticle('p_4274');return false;">
                     </map>
                     <span class="nbArticles">1</span>
-                    <span class="ajoutretrait"><img src="#img/panier/change.gif" alt="" usemap="#modifQtep_4274"></span>
-                    <span class="descArtPanier"><a ng-click="" title="">{{a.name}} {{a.mark}}</a></span>
+                    <span class="ajoutretrait"><img src="images/change.gif" alt="" usemap="#modifQtep_4274"></span>
+                    <span class="descArtPanier"><a ng-click="" title="">{{a.name}} {{a.mark}}</a><a ng-click="showAlt(a,$index)" ng-show="showPin(a)"><img src="images/erable.png" style="width: 21px;height: 15px;"></a></span>
                     <span class="prixArtPanier">{{a.price}}</span>
                     </p>
                 </div>
@@ -244,12 +260,15 @@
     <div id="tooltip" style="display:none;">&nbsp;</div>
     <p id="tooltip_label" style="display:none;" class="">&nbsp;</p>
 
-        <script src="scripts/vendor/angular.js"></script>
+    <script src="scripts/vendor/jquery.min.js"></script>
+    <script src="scripts/vendor/jquery.peity.min.js"></script>
     <script src="scripts/vendor/underscore.js"></script>
+        <script src="scripts/vendor/angular.js"></script>
 
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/cartocad.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/directives/pie.js"></script>
         <!-- endbuild -->
 
     </body>

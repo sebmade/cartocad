@@ -9,6 +9,18 @@ div#blocs_articles {
     text-align:         center;
     height:             100%;
 }
+div#blocs_articles2 {
+    position: absolute;
+    display: block;
+    margin: 10px 0;
+    padding: 50px 50px;
+    text-align: center;
+    background-color: #FFFFFF;
+    left: 30%;
+    width: 389px;
+    height: 170px;
+    border: 1px solid black;
+}
 p#nombreArticles {
     font-weight:        bold;
     padding-left:       20px;
@@ -24,6 +36,10 @@ div.article {
     float:              left;
     background-position: 0 0;
     background-repeat:  no-repeat;
+}
+.altdiv {
+    width: 200px;
+    padding: 10px;
 }
 
 /* CONTEXTE D'AFFICHAGE NORMAL  : n         */
@@ -275,6 +291,11 @@ div#blocs_articles p.prixProduit {
     bottom:             8px;
     left:               25px;
 }
+div#blocs_articles2 p.prixProduit {
+    position:           absolute;
+    bottom:             8px;
+    left:               25px;
+}
 span.prixPromo {
     text-decoration:    line-through;
     background-color:   inherit;
@@ -357,4 +378,5 @@ p#suggestions {
 .infoSortieCaissePdr{
 	color: #FF0000;
 	font-weight:        bold;
-}	
+}
+
