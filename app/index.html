@@ -58,7 +58,7 @@
                         <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/19358" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','19358');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('19358');" title=""><img id="item19358" src="images/19358_icone.gif" /></a></td>
                         <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15022" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15022');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15022');" title=""><img id="item15022" src="images/15022_icone.gif" /></a></td>
                         <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15039" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15039');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15039');" title=""><img id="item15039" src="images/15039_icone.gif" /></a></td>
-                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15053" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15053');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15053');" title=""><img id="item15053" src="images/15053_icone.gif" /></a><td>
+                        <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15053" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15053');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15053');" title=""><img id="item15053" src="images/15053_icone.gif" /></a></td>
                         <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15068" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15068');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15068');" title=""><img id="item15068" src="images/15068_icone.gif" /></a></td>
                         <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15098" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15098');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15098');" title=""><img id="item15098" src="images/15098_icone.gif" /></a></td>
                         <td style="width: 100px"><a href="http://www.auchandirect.fr/frontoffice/index/catalogue/famille/15116" onmouseover="if (typeof oToolTip != 'undefined') oToolTip._show('carroussel','15116');" onmouseout="if (typeof oToolTip != 'undefined') oToolTip._hide('15116');" title=""><img id="item15116" src="images/15116_icone.gif" /></a></td>
@@ -121,12 +121,11 @@
                 </form>
             </div>
         </div>
-
     </div>
     <div id="bannieresPanier">
-        <script type='text/javascript'>sas_pageid='22641/155731';sas_formatid=9863;sas_target='';SmartAdServer(sas_pageid,sas_formatid,sas_target);</script>
-
-    </div>    <div id="index">
+        
+    </div>
+    <div id="index">
     <div id="bandeau_accueil_famille" style="background-image: url('images/15022_banniere.jpg'); background-repeat: no-repeat; color: #3F5F07;  background-color: #82B22C;">
         <div id="bannieresFamille">
 
@@ -167,7 +166,7 @@
         <p class="prodType prodType_n_2">&nbsp;</p>
         <p class="boutonsArticle">
             <a href="http://www.auchandirect.fr/frontoffice/index/listes_ajout/type/p/id/4276" title="Ajouter à la liste" onclick="return(verifInternauteLoggue());"><img src="http://www.auchandirect.fr/frontoffice//img/espaceur.gif" class="ajoutListe" alt="Ajouter à la liste" /></a>
-            <a href="./" title="Ajouter au panier" onclick="oPanier._insArticle('p_4276'); return false;"><img src="http://www.auchandirect.fr/frontoffice/img/espaceur.gif" class="ajoutPanier" alt="Ajouter au panier" /></a>
+            <a title="Ajouter au panier" ng-click="addToCart(a)"><img src="http://www.auchandirect.fr/frontoffice/img/espaceur.gif" class="ajoutPanier" alt="Ajouter au panier" /></a>
         </p>
     </div>
 
@@ -184,9 +183,20 @@
             </map>
             <img id="hautpanier" src="http://images.auchandirect.fr/frontoffice/img/panier/detailpanier_new.gif" usemap="#detailpanier" alt="" />
             detailpanier
-            <p id="panier_prix"></p>
+            <p id="panier_prix">{{total() | currency}}</p>
             <form id="formPanier" action="#" method="post" onsubmit="return false;">
-                <div id="panier_contenu">&nbsp;</div>
+                <div id="panier_contenu">
+                    <p id="articlep_4274" ng-repeat="a in cart">
+                    <map id="modifQtep_4274" name="modifQtep_4274">
+                        <area shape="rect" coords="0, 0, 9, 9" href="#" alt="Augmenter la quantité" title="Augmenter la quantité" onclick="oPanier._insArticle('p_4274');return false;">
+                        <area shape="rect" coords="0, 10, 9, 19" href="#" alt="Diminuer la quantité" title="Diminuer la quantité" onclick="oPanier._delArticle('p_4274');return false;">
+                    </map>
+                    <span class="nbArticles">1</span>
+                    <span class="ajoutretrait"><img src="http://www.auchandirect.fr/frontoffice/img/panier/change.gif" alt="" usemap="#modifQtep_4274"></span>
+                    <span class="descArtPanier"><a ng-click="" title="">{{a.name}} {{a.mark}}</a></span>
+                    <span class="prixArtPanier">{{a.price}}</span>
+                    </p>
+                </div>
                 <div id="piedpanier">
                     <input type="hidden" name="idListePanier" id="idListePanier" value="" />
                     <input type="image" id="panier_vider" title="Vider le panier" src="http://images.auchandirect.fr/frontoffice/img/panier/panier_btn_vider.gif" name="panier_vider" value="vider" onclick="return oPanier._emptyPanier();" />
@@ -221,6 +231,7 @@
     <p id="tooltip_label" style="display:none;" class="">&nbsp;</p>
 
         <script src="scripts/vendor/angular.js"></script>
+    <script src="scripts/vendor/underscore.js"></script>
 
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/cartocad.js"></script>
